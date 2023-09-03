@@ -24,11 +24,11 @@ function CategoryPublic({ children }) {
       <article className='tagcloud standart_cat_header cat-fon-repeat'>
         <div className='kw-wrapper kw-wrapper--1536'>
           <div className='bread-crump block-response bread-crump--pretty'>
-            <ol className='mb0' itemscope='itemscope' itemtype='http://schema.org/BreadcrumbList'>
+            <ol className='mb0' itemScope='itemScope' itemType='http://schema.org/BreadcrumbList'>
               <li
-                itemprop='itemListElement'
-                itemscope='itemscope'
-                itemtype='http://schema.org/ListItem'
+                itemProp='itemListElement'
+                itemScope='itemScope'
+                itemType='http://schema.org/ListItem'
                 data-item-type='category'
                 data-level='1'>
                 <Link to='https://kwork.ru/categories/design' data-href='https://kwork.ru/categories/design'>
@@ -40,7 +40,7 @@ function CategoryPublic({ children }) {
               </li>
               <li
                 itemProp='itemListElement'
-                itemScope='itemscope'
+                itemScope='itemScope'
                 itemType='http://schema.org/ListItem'
                 data-item-type='category'
                 data-level='2'>
@@ -56,7 +56,7 @@ function CategoryPublic({ children }) {
               </li>
               <li
                 itemProp='itemListElement'
-                itemScope='itemscope'
+                itemScope='itemScope'
                 itemType='http://schema.org/ListItem'
                 data-item-type='attribute'
                 data-level='1'>
@@ -139,7 +139,7 @@ function CategoryPublic({ children }) {
                               fill='none'
                               xmlns='http://www.w3.org/2000/svg'
                               className='custom-switcher__arrow'>
-                              <path d='M12 14l4 4 4-4' stroke-width='1.6' stroke-linecap='round'></path>
+                              <path d='M12 14l4 4 4-4' strokeWidth='1.6' strokeLinecap='round'></path>
                             </svg>
                           </div>
                           <div className='custom-switcher__list'>
