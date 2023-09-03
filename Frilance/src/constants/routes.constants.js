@@ -18,5 +18,5 @@ const r = Object.freeze({
     seller:'/seller',
     buyer:'/buyer'
 
-})
+});
 export default r

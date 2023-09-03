@@ -55,10 +55,10 @@ export const publicRouteConfig = [
     {
         id: '9',
         path: r.categoriesLogotip,
-        component: SubCategoryPublic,
+        component: CategoryPublic,
         exact: true,
     },
-]
+];
 export const privateRouteConfig = [
     {
         id: '10',
@@ -66,4 +66,4 @@ export const privateRouteConfig = [
         component: HomePublic,
         exact: true,
     },
-]
+];

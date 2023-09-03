@@ -52,7 +52,7 @@ const uploadAvatar = multer({ storageAvatar });
 app.use("/api/user/avatar_picture", express.static(path.resolve(__dirname, "files", "user", "avatar")));
 app.use("/api/category/icon", express.static(path.resolve(__dirname, "files", "categoryicon")));
 app.use("/api/category/images", express.static(path.resolve(__dirname, "files", "ctegoryimages")));
-app.get('/api/list_category', CategoryController.getAllCategory)
+app.use('/api/list_category', CategoryController.getAllCategory)
 
 app.post('/api/list_category_pages', CategoryController.getPageCategory)
 app.post('/api/list_sub_category_pages', CategoryController.getSubPageCategory)
