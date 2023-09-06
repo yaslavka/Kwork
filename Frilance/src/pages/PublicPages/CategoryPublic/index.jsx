@@ -1549,7 +1549,8 @@ function CategoryPublic({ children }) {
         <section id='catalog-cards'>
           <div
             data-id='140734'
-            className='cusongsblock js-kwork-card kwork-card-item kwork-card-item--update kwork-card-item--seller-level'>
+            className='cusongsblock js-kwork-card kwork-card-item
+             kwork-card-item--update kwork-card-item--seller-level'>
             <div className='kwork-card-item__wrapper'>
               <div className='songperson cusongsblock__content kwork-card-item__left kwork-card-portfolio-wrapper kwork-card-item__preview'>
                 <a
@@ -1681,29 +1682,29 @@ function CategoryPublic({ children }) {
             </div>
           </div>
           <div
-              data-id='140734'
-              className='cusongsblock js-kwork-card kwork-card-item kwork-card-item--update kwork-card-item--seller-level'>
+            data-id='140734'
+            className='cusongsblock js-kwork-card kwork-card-item kwork-card-item--update kwork-card-item--seller-level'>
             <div className='kwork-card-item__wrapper'>
               <div className='songperson cusongsblock__content kwork-card-item__left kwork-card-portfolio-wrapper kwork-card-item__preview'>
                 <a
-                    href='https://kwork.ru/logo/140734/sozdam-unikalniy-logotip-besplatnie-pravki'
-                    className='ispinner-container kwcard-ppreview js-kwork-card-portfolio-preview js-lazy-load-carousel init js-lazy-load-without-viewport'>
+                  href='https://kwork.ru/logo/140734/sozdam-unikalniy-logotip-besplatnie-pravki'
+                  className='ispinner-container kwcard-ppreview js-kwork-card-portfolio-preview js-lazy-load-carousel init js-lazy-load-without-viewport'>
                   <div className='thumbnail-img-load'>
                     <div className='ispinner-lite'></div>
                   </div>
                   <div className='kwcard-ppreview__wrapper'>
                     <picture data-id='0'>
                       <source
-                          media='(max-width: 767px)'
-                          srcSet='https://cdn-edge.kwork.ru/pics/t6/79/140734-6440f45c764b6.webp 1x, https://cdn-edge.kwork.ru/pics/t6_r/79/140734-6440f45c764b6.webp 2x'
+                        media='(max-width: 767px)'
+                        srcSet='https://cdn-edge.kwork.ru/pics/t6/79/140734-6440f45c764b6.webp 1x, https://cdn-edge.kwork.ru/pics/t6_r/79/140734-6440f45c764b6.webp 2x'
                       />
                       <source
-                          media='(min-width: 768px)'
-                          srcSet='https://cdn-edge.kwork.ru/pics/t5/79/140734-6440f45c764b6.webp 1x, https://cdn-edge.kwork.ru/pics/t5_r/79/140734-6440f45c764b6.webp 2x'
+                        media='(min-width: 768px)'
+                        srcSet='https://cdn-edge.kwork.ru/pics/t5/79/140734-6440f45c764b6.webp 1x, https://cdn-edge.kwork.ru/pics/t5_r/79/140734-6440f45c764b6.webp 2x'
                       />
                       <img
-                          src='https://cdn-edge.kwork.ru/pics/t4/79/140734-6440f45c764b6.webp'
-                          className='kwcard-ppreview__image'
+                        src='https://cdn-edge.kwork.ru/pics/t4/79/140734-6440f45c764b6.webp'
+                        className='kwcard-ppreview__image'
                       />
                     </picture>
                   </div>
@@ -1726,12 +1727,12 @@ function CategoryPublic({ children }) {
                   </div>
                 </a>
                 <div
-                    className='kwork-card-portfolio-icon kwork-card-portfolio-icon--update tooltipster m-hidden js-kwork-card-portfolio-icon tooltipstered'
-                    data-portfolio-id='10646107'
-                    data-tooltip-text='Смотреть портфолио'
-                    data-tooltip-side='top'
-                    data-tooltip-delay='500, 50'
-                    data-tooltip-interactive='false'>
+                  className='kwork-card-portfolio-icon kwork-card-portfolio-icon--update tooltipster m-hidden js-kwork-card-portfolio-icon tooltipstered'
+                  data-portfolio-id='10646107'
+                  data-tooltip-text='Смотреть портфолио'
+                  data-tooltip-side='top'
+                  data-tooltip-delay='500, 50'
+                  data-tooltip-interactive='false'>
                   <svg>
                     <use href='#svg-portfolio'></use>
                   </svg>
@@ -1740,9 +1741,9 @@ function CategoryPublic({ children }) {
               <div className='kwork-card-item__content'>
                 <p className='kwork-card-item__title'>
                   <a
-                      href='https://kwork.ru/logo/140734/sozdam-unikalniy-logotip-besplatnie-pravki'
-                      title=''
-                      className=''>
+                    href='https://kwork.ru/logo/140734/sozdam-unikalniy-logotip-besplatnie-pravki'
+                    title=''
+                    className=''>
                     {' '}
                     <span className='first-letter breakwords force-font force-font--s14'>
                       Создам уникальный логотип. Бесплатные правки
@@ -1764,14 +1765,14 @@ function CategoryPublic({ children }) {
                   <div className='kwork-card-item__username kwork-card-item__username--with-level'>
                     <div className='kwork-card-item__user-avatar'>
                       <i
-                          data-user-id='13104'
-                          className='js-user-online-block dot-user-status track--item__title-status dot-user-offline is-init'></i>
+                        data-user-id='13104'
+                        className='js-user-online-block dot-user-status track--item__title-status dot-user-offline is-init'></i>
                       <span className='user-avatar t-user-avatar'>
                         <img
-                            src='https://cdn-edge.kwork.ru/files/avatar/small/36/13104-54.jpg'
-                            srcSet='https://cdn-edge.kwork.ru/files/avatar/small/36/13104-54.jpg 1x, https://cdn-edge.kwork.ru/files/avatar/small_r/36/13104-54.jpg 2x'
-                            alt=''
-                            className='user-avatar__picture rounded'
+                          src='https://cdn-edge.kwork.ru/files/avatar/small/36/13104-54.jpg'
+                          srcSet='https://cdn-edge.kwork.ru/files/avatar/small/36/13104-54.jpg 1x, https://cdn-edge.kwork.ru/files/avatar/small_r/36/13104-54.jpg 2x'
+                          alt=''
+                          className='user-avatar__picture rounded'
                         />
                       </span>
                     </div>
@@ -1801,8 +1802,8 @@ function CategoryPublic({ children }) {
                 </div>
                 <div data-id='140734' className='kwork-card-item__favorites js-favorites-signup'>
                   <div
-                      data-tooltip-text='Вы сможете заносить кворки в Избранное, когда <span class="js-favorites-signin kw-link" data-id="140734">авторизуетесь</span>'
-                      className='dib tooltipster tooltipstered'>
+                    data-tooltip-text='Вы сможете заносить кворки в Избранное, когда <span class="js-favorites-signin kw-link" data-id="140734">авторизуетесь</span>'
+                    className='dib tooltipster tooltipstered'>
                     <span className='cur kwork-icon icon-heart icon-heart-card icon-heart--card'>
                       <svg>
                         <use href='#svg-like-heart'></use>
