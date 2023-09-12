@@ -57,7 +57,7 @@ function Steps() {
                 </div>
                 <div
                   className='steps__arrow steps__arrow--choose js-animation-arrow js-animation-arrow-choose'
-                  style={{ opacity: 1, transform: `rotate(${-90 + rotation}deg)`}}>
+                  style={{ opacity: 1, transform: `rotate(${-90 + rotation}deg)` }}>
                   <img
                     className='js-lazy-load-image lazy-load_initialized'
                     data-src='https://cdn-edge.kwork.ru/images/index/steps-choose-arrow.svg'
@@ -85,7 +85,7 @@ function Steps() {
                 </div>
                 <div
                   className='steps__arrow steps__arrow--pay js-animation-arrow js-animation-arrow-pay'
-                  style={{ opacity: 1, transform: `rotate(${60 - rotation}deg)`}}>
+                  style={{ opacity: 1, transform: `rotate(${60 - rotation}deg)` }}>
                   <img
                     className='js-lazy-load-image lazy-load_initialized'
                     data-src='https://cdn-edge.kwork.ru/images/index/steps-pay-arrow.svg'
@@ -113,7 +113,7 @@ function Steps() {
                 </div>
                 <div
                   className='steps__arrow steps__arrow--result js-animation-arrow js-animation-arrow-result'
-                  style={{ opacity: 1, transform: `rotate(${-10 + rotation}deg)`}}>
+                  style={{ opacity: 1, transform: `rotate(${-10 + rotation}deg)` }}>
                   <img
                     className='js-lazy-load-image lazy-load_initialized'
                     data-src='https://cdn-edge.kwork.ru/images/index/steps-result-arrow.svg'
@@ -130,3 +130,4 @@ function Steps() {
   );
 }
 export default Steps;
+// src={`http://192.168.1.56/api/category/icon/${subCategory.icon}`}

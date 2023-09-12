@@ -54,7 +54,7 @@ function DesignCategory({ listItem }) {
                                         data-tooltip-thidden='true'>
                                         <img
                                           className='submenu-item__icon-img'
-                                          src='https://cdn-edge.kwork.ru/images/mobile_menu/fire.svg'
+                                          src={`http://192.168.1.56/api/category/icon/${subCategory.icon}`}
                                           alt='Популярный раздел логотипы'
                                         />
                                       </span>
@@ -98,7 +98,7 @@ function DesignCategory({ listItem }) {
                                         data-tooltip-thidden='true'>
                                         <img
                                           className='submenu-item__icon-img'
-                                          src='https://cdn-edge.kwork.ru/images/mobile_menu/fire.svg'
+                                          src={`http://192.168.1.56/api/category/icon/${subCategory.icon}`}
                                           alt='Популярный раздел логотипы'
                                         />
                                       </span>
@@ -142,7 +142,7 @@ function DesignCategory({ listItem }) {
                                         data-tooltip-thidden='true'>
                                         <img
                                           className='submenu-item__icon-img'
-                                          src='https://cdn-edge.kwork.ru/images/mobile_menu/fire.svg'
+                                          src={`http://192.168.1.56/api/category/icon/${subCategory.icon}`}
                                           alt='Популярный раздел логотипы'
                                         />
                                       </span>

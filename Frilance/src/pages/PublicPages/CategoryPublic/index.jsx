@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { api, categoryImage } from '../../../api';
-import { toast } from 'react-toastify';
-import styles from './categoryPublick.module.scss';
+import starRating from '../../../assets/images/icons/user-level-top-rated.svg';
+// import { api, categoryImage } from '../../../api';
+// import { toast } from 'react-toastify';
+// import styles from './categoryPublick.module.scss';
+import { slider } from './mockData';
 
 function CategoryPublic({ children }) {
   const location = useLocation();
@@ -1547,273 +1549,139 @@ function CategoryPublic({ children }) {
           </button>
         </aside>
         <section id='catalog-cards'>
-          <div
-            data-id='140734'
-            className='cusongsblock js-kwork-card kwork-card-item
+          {slider.map((item, index) => (
+            <div
+              key={index}
+              data-id={item.id}
+              className='cusongsblock js-kwork-card kwork-card-item
              kwork-card-item--update kwork-card-item--seller-level'>
-            <div className='kwork-card-item__wrapper'>
-              <div className='songperson cusongsblock__content kwork-card-item__left kwork-card-portfolio-wrapper kwork-card-item__preview'>
-                <a
-                  href='https://kwork.ru/logo/140734/sozdam-unikalniy-logotip-besplatnie-pravki'
-                  className='ispinner-container kwcard-ppreview js-kwork-card-portfolio-preview js-lazy-load-carousel init js-lazy-load-without-viewport'>
-                  <div className='thumbnail-img-load'>
-                    <div className='ispinner-lite'></div>
-                  </div>
-                  <div className='kwcard-ppreview__wrapper'>
-                    <picture data-id='0'>
-                      <source
-                        media='(max-width: 767px)'
-                        srcSet='https://cdn-edge.kwork.ru/pics/t6/79/140734-6440f45c764b6.webp 1x, https://cdn-edge.kwork.ru/pics/t6_r/79/140734-6440f45c764b6.webp 2x'
-                      />
-                      <source
-                        media='(min-width: 768px)'
-                        srcSet='https://cdn-edge.kwork.ru/pics/t5/79/140734-6440f45c764b6.webp 1x, https://cdn-edge.kwork.ru/pics/t5_r/79/140734-6440f45c764b6.webp 2x'
-                      />
-                      <img
-                        src='https://cdn-edge.kwork.ru/pics/t4/79/140734-6440f45c764b6.webp'
-                        className='kwcard-ppreview__image'
-                      />
-                    </picture>
-                  </div>
-                  <div className='kwcard-ppreview__button prev'></div>
-                  <div className='kwcard-ppreview__button next'></div>
-                  <div className='kwcard-ppreview__dots'>
-                    <div className='kwcard-ppreview__dot active'></div>
-                    <div className='kwcard-ppreview__dot'></div>
-                    <div className='kwcard-ppreview__dot'></div>
-                    <div className='kwcard-ppreview__dot'></div>
-                    <div className='kwcard-ppreview__dot edge'></div>
-                    <div className='kwcard-ppreview__dot hidden'></div>
-                    <div className='kwcard-ppreview__dot hidden'></div>
-                    <div className='kwcard-ppreview__dot hidden'></div>
-                    <div className='kwcard-ppreview__dot hidden'></div>
-                    <div className='kwcard-ppreview__dot hidden'></div>
-                    <div className='kwcard-ppreview__dot hidden'></div>
-                    <div className='kwcard-ppreview__dot hidden'></div>
-                    <div className='kwcard-ppreview__dot hidden'></div>
-                  </div>
-                </a>
-                <div
-                  className='kwork-card-portfolio-icon kwork-card-portfolio-icon--update tooltipster m-hidden js-kwork-card-portfolio-icon tooltipstered'
-                  data-portfolio-id='10646107'
-                  data-tooltip-text='Смотреть портфолио'
-                  data-tooltip-side='top'
-                  data-tooltip-delay='500, 50'
-                  data-tooltip-interactive='false'>
-                  <svg>
-                    <use href='#svg-portfolio'></use>
-                  </svg>
-                </div>
-              </div>
-              <div className='kwork-card-item__content'>
-                <p className='kwork-card-item__title'>
-                  <a
-                    href='https://kwork.ru/logo/140734/sozdam-unikalniy-logotip-besplatnie-pravki'
-                    title=''
-                    className=''>
-                    {' '}
-                    <span className='first-letter breakwords force-font force-font--s14'>
-                      Создам уникальный логотип. Бесплатные правки
-                    </span>
-                  </a>
-                </p>
-                <div className='kwork-card-item__info kwork-card-item__info--from'>
-                  <div className='kwork-card-item__info-price price'>
-                    <div className=''>
-                      <span className='price-wrap'>
-                        <span className='price-wrap__value force-font force-font--s15'>
-                          от 2 000&nbsp;<span className='rouble'>₽</span>
-                        </span>
-                      </span>
+              <div className='kwork-card-item__wrapper'>
+                <div className='songperson cusongsblock__content kwork-card-item__left kwork-card-portfolio-wrapper kwork-card-item__preview'>
+                  <Link
+                    to={`${item.url}/${item.id}`}
+                    className='ispinner-container kwcard-ppreview js-kwork-card-portfolio-preview js-lazy-load-carousel init js-lazy-load-without-viewport'>
+                    <div className='thumbnail-img-load'>
+                      <div className='ispinner-lite'></div>
                     </div>
-                  </div>
-                </div>
-                <div className='userdata kwork-card-item__userdata'>
-                  <div className='kwork-card-item__username kwork-card-item__username--with-level'>
-                    <div className='kwork-card-item__user-avatar'>
-                      <i
-                        data-user-id='13104'
-                        className='js-user-online-block dot-user-status track--item__title-status dot-user-offline is-init'></i>
-                      <span className='user-avatar t-user-avatar'>
+                    <div className='kwcard-ppreview__wrapper'>
+                      {item.images ? (
                         <img
-                          src='https://cdn-edge.kwork.ru/files/avatar/small/36/13104-54.jpg'
-                          srcSet='https://cdn-edge.kwork.ru/files/avatar/small/36/13104-54.jpg 1x, https://cdn-edge.kwork.ru/files/avatar/small_r/36/13104-54.jpg 2x'
-                          alt=''
-                          className='user-avatar__picture rounded'
+                          // src={`http://192.168.1.56/api/category/images/${item.images}`}
+                          src={`${item.images}`}
+                          className='kwcard-ppreview__image'
                         />
-                      </span>
+                      ) : (
+                        <img
+                          src='https://cdn-edge.kwork.ru/pics/t4/79/140734-6440f45c764b6.webp'
+                          className='kwcard-ppreview__image'
+                        />
+                      )}
                     </div>
-                    <div className='kwork-card-item__user-link-wrap'>
-                      <div className='d-flex justify-content-between align-items-center'>
-                        <a href='/user/yekaterina31' title='Yekaterina31' className='oneline-faded'>
-                          Yekaterina31
-                        </a>
-                        <div className='kwork-card-item__rating cusongsblock-panel__rating d-flex align-items-center'>
-                          <ul className='rating-block cusongsblock-panel__rating-list ul-outside'>
-                            <li className='mr2 v-align-m'>
-                              <i aria-hidden='true' className='fa fa-star gold'></i>
-                            </li>
-                            <li className='rating-block__rating-item--number fw600 v-align-m'>5.0</li>
-                          </ul>
-                          <span className='rating-block__count rating-block__count-star'>(377)</span>
+                    <div className='kwcard-ppreview__button prev'></div>
+                    <div className='kwcard-ppreview__button next'></div>
+                    <div className='kwcard-ppreview__dots'>
+                      <div className='kwcard-ppreview__dot active'></div>
+                      <div className='kwcard-ppreview__dot'></div>
+                      <div className='kwcard-ppreview__dot'></div>
+                      <div className='kwcard-ppreview__dot'></div>
+                      <div className='kwcard-ppreview__dot edge'></div>
+                      <div className='kwcard-ppreview__dot hidden'></div>
+                      <div className='kwcard-ppreview__dot hidden'></div>
+                      <div className='kwcard-ppreview__dot hidden'></div>
+                      <div className='kwcard-ppreview__dot hidden'></div>
+                      <div className='kwcard-ppreview__dot hidden'></div>
+                      <div className='kwcard-ppreview__dot hidden'></div>
+                      <div className='kwcard-ppreview__dot hidden'></div>
+                      <div className='kwcard-ppreview__dot hidden'></div>
+                    </div>
+                  </Link>
+                  <div
+                    className='kwork-card-portfolio-icon kwork-card-portfolio-icon--update tooltipster m-hidden js-kwork-card-portfolio-icon tooltipstered'
+                    data-portfolio-id='10646107'
+                    data-tooltip-text='Смотреть портфолио'
+                    data-tooltip-side='top'
+                    data-tooltip-delay='500, 50'
+                    data-tooltip-interactive='false'>
+                    {/*{item.icon && `http://192.168.1.56/api/category/images/${item.icon}`}*/}
+                    {item.icon && item.icon}
+                  </div>
+                </div>
+                <div className='kwork-card-item__content'>
+                  <p className='kwork-card-item__title'>
+                    <a
+                      href='https://kwork.ru/logo/140734/sozdam-unikalniy-logotip-besplatnie-pravki'
+                      title=''
+                      className=''>
+                      {' '}
+                      <span className='first-letter breakwords force-font force-font--s14'>
+                        {item.title}
+                      </span>
+                    </a>
+                  </p>
+                  <div className='kwork-card-item__info kwork-card-item__info--from'>
+                    <div className='kwork-card-item__info-price price'>
+                      <div className=''>
+                        <span className='price-wrap'>
+                          <span className='price-wrap__value force-font force-font--s15'>
+                            от {item.price}&nbsp;<span className='rouble'>₽</span>
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='userdata kwork-card-item__userdata'>
+                    <div className='kwork-card-item__username kwork-card-item__username--with-level'>
+                      <div className='kwork-card-item__user-avatar'>
+                        <i
+                          data-user-id='13104'
+                          className='js-user-online-block dot-user-status track--item__title-status dot-user-offline is-init'></i>
+                        <span className='user-avatar t-user-avatar'>
+                          <img
+                            src={item.user.avatar}
+                            alt='avatar'
+                            className='user-avatar__picture rounded'
+                          />
+                        </span>
+                      </div>
+                      <div className='kwork-card-item__user-link-wrap'>
+                        <div className='d-flex justify-content-between align-items-center'>
+                          <Link to={`/user/${item.user.userName}`} title={`${item.user.userName}`} className='oneline-faded'>
+                            {item.user.userName}
+                          </Link>
+                          <div className='kwork-card-item__rating cusongsblock-panel__rating d-flex align-items-center'>
+                            <ul className='rating-block cusongsblock-panel__rating-list ul-outside'>
+                              <li className='mr2 v-align-m'>
+                                <i aria-hidden='true' className='fa fa-star gold'></i>
+                              </li>
+                              <li className='rating-block__rating-item--number fw600 v-align-m'>{item.user.gradeRating}</li>
+                            </ul>
+                            <span className='rating-block__count rating-block__count-star'>({item.user.countRating})</span>
+                          </div>
+                        </div>
+                        <div className='kwork-card-item__user-level-wrap kwork-card-item__user-level-wrap--2'>
+                          <span className='kwork-card-item__user-level has-tooltip' data-original-title='null'>
+                            <span className='kwork-card-item__user-level-icon'>
+                              <img src={starRating} alt="rating star"/>
+                            </span>
+                            {item.user.titleRating}
+                          </span>
                         </div>
                       </div>
-                      <div className='kwork-card-item__user-level-wrap kwork-card-item__user-level-wrap--2'>
-                        <span className='kwork-card-item__user-level has-tooltip' data-original-title='null'>
-                          <span className='kwork-card-item__user-level-icon'></span>
-                          Высший рейтинг
-                        </span>
-                      </div>
                     </div>
                   </div>
-                </div>
-                <div data-id='140734' className='kwork-card-item__favorites js-favorites-signup'>
-                  <div
-                    data-tooltip-text='Вы сможете заносить кворки в Избранное, когда <span class="js-favorites-signin kw-link" data-id="140734">авторизуетесь</span>'
-                    className='dib tooltipster tooltipstered'>
-                    <span className='cur kwork-icon icon-heart icon-heart-card icon-heart--card'>
-                      <svg>
-                        <use href='#svg-like-heart'></use>
-                      </svg>
-                    </span>
+                  <div data-id='140734' className='kwork-card-item__favorites js-favorites-signup'>
+                    <div
+                      data-tooltip-text='Вы сможете заносить кворки в Избранное, когда <span class="js-favorites-signin kw-link" data-id="140734">авторизуетесь</span>'
+                      className='dib tooltipster tooltipstered'>
+                      <span className='cur kwork-icon icon-heart icon-heart-card icon-heart--card'>
+                        {item.secondIcon && item.secondIcon}
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            data-id='140734'
-            className='cusongsblock js-kwork-card kwork-card-item kwork-card-item--update kwork-card-item--seller-level'>
-            <div className='kwork-card-item__wrapper'>
-              <div className='songperson cusongsblock__content kwork-card-item__left kwork-card-portfolio-wrapper kwork-card-item__preview'>
-                <a
-                  href='https://kwork.ru/logo/140734/sozdam-unikalniy-logotip-besplatnie-pravki'
-                  className='ispinner-container kwcard-ppreview js-kwork-card-portfolio-preview js-lazy-load-carousel init js-lazy-load-without-viewport'>
-                  <div className='thumbnail-img-load'>
-                    <div className='ispinner-lite'></div>
-                  </div>
-                  <div className='kwcard-ppreview__wrapper'>
-                    <picture data-id='0'>
-                      <source
-                        media='(max-width: 767px)'
-                        srcSet='https://cdn-edge.kwork.ru/pics/t6/79/140734-6440f45c764b6.webp 1x, https://cdn-edge.kwork.ru/pics/t6_r/79/140734-6440f45c764b6.webp 2x'
-                      />
-                      <source
-                        media='(min-width: 768px)'
-                        srcSet='https://cdn-edge.kwork.ru/pics/t5/79/140734-6440f45c764b6.webp 1x, https://cdn-edge.kwork.ru/pics/t5_r/79/140734-6440f45c764b6.webp 2x'
-                      />
-                      <img
-                        src='https://cdn-edge.kwork.ru/pics/t4/79/140734-6440f45c764b6.webp'
-                        className='kwcard-ppreview__image'
-                      />
-                    </picture>
-                  </div>
-                  <div className='kwcard-ppreview__button prev'></div>
-                  <div className='kwcard-ppreview__button next'></div>
-                  <div className='kwcard-ppreview__dots'>
-                    <div className='kwcard-ppreview__dot active'></div>
-                    <div className='kwcard-ppreview__dot'></div>
-                    <div className='kwcard-ppreview__dot'></div>
-                    <div className='kwcard-ppreview__dot'></div>
-                    <div className='kwcard-ppreview__dot edge'></div>
-                    <div className='kwcard-ppreview__dot hidden'></div>
-                    <div className='kwcard-ppreview__dot hidden'></div>
-                    <div className='kwcard-ppreview__dot hidden'></div>
-                    <div className='kwcard-ppreview__dot hidden'></div>
-                    <div className='kwcard-ppreview__dot hidden'></div>
-                    <div className='kwcard-ppreview__dot hidden'></div>
-                    <div className='kwcard-ppreview__dot hidden'></div>
-                    <div className='kwcard-ppreview__dot hidden'></div>
-                  </div>
-                </a>
-                <div
-                  className='kwork-card-portfolio-icon kwork-card-portfolio-icon--update tooltipster m-hidden js-kwork-card-portfolio-icon tooltipstered'
-                  data-portfolio-id='10646107'
-                  data-tooltip-text='Смотреть портфолио'
-                  data-tooltip-side='top'
-                  data-tooltip-delay='500, 50'
-                  data-tooltip-interactive='false'>
-                  <svg>
-                    <use href='#svg-portfolio'></use>
-                  </svg>
-                </div>
-              </div>
-              <div className='kwork-card-item__content'>
-                <p className='kwork-card-item__title'>
-                  <a
-                    href='https://kwork.ru/logo/140734/sozdam-unikalniy-logotip-besplatnie-pravki'
-                    title=''
-                    className=''>
-                    {' '}
-                    <span className='first-letter breakwords force-font force-font--s14'>
-                      Создам уникальный логотип. Бесплатные правки
-                    </span>
-                  </a>
-                </p>
-                <div className='kwork-card-item__info kwork-card-item__info--from'>
-                  <div className='kwork-card-item__info-price price'>
-                    <div className=''>
-                      <span className='price-wrap'>
-                        <span className='price-wrap__value force-font force-font--s15'>
-                          от 2 000&nbsp;<span className='rouble'>₽</span>
-                        </span>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div className='userdata kwork-card-item__userdata'>
-                  <div className='kwork-card-item__username kwork-card-item__username--with-level'>
-                    <div className='kwork-card-item__user-avatar'>
-                      <i
-                        data-user-id='13104'
-                        className='js-user-online-block dot-user-status track--item__title-status dot-user-offline is-init'></i>
-                      <span className='user-avatar t-user-avatar'>
-                        <img
-                          src='https://cdn-edge.kwork.ru/files/avatar/small/36/13104-54.jpg'
-                          srcSet='https://cdn-edge.kwork.ru/files/avatar/small/36/13104-54.jpg 1x, https://cdn-edge.kwork.ru/files/avatar/small_r/36/13104-54.jpg 2x'
-                          alt=''
-                          className='user-avatar__picture rounded'
-                        />
-                      </span>
-                    </div>
-                    <div className='kwork-card-item__user-link-wrap'>
-                      <div className='d-flex justify-content-between align-items-center'>
-                        <a href='/user/yekaterina31' title='Yekaterina31' className='oneline-faded'>
-                          Yekaterina31
-                        </a>
-                        <div className='kwork-card-item__rating cusongsblock-panel__rating d-flex align-items-center'>
-                          <ul className='rating-block cusongsblock-panel__rating-list ul-outside'>
-                            <li className='mr2 v-align-m'>
-                              <i aria-hidden='true' className='fa fa-star gold'></i>
-                            </li>
-                            <li className='rating-block__rating-item--number fw600 v-align-m'>5.0</li>
-                          </ul>
-                          <span className='rating-block__count rating-block__count-star'>(377)</span>
-                        </div>
-                      </div>
-                      <div className='kwork-card-item__user-level-wrap kwork-card-item__user-level-wrap--2'>
-                        <span className='kwork-card-item__user-level has-tooltip' data-original-title='null'>
-                          <span className='kwork-card-item__user-level-icon'></span>
-                          Высший рейтинг
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div data-id='140734' className='kwork-card-item__favorites js-favorites-signup'>
-                  <div
-                    data-tooltip-text='Вы сможете заносить кворки в Избранное, когда <span class="js-favorites-signin kw-link" data-id="140734">авторизуетесь</span>'
-                    className='dib tooltipster tooltipstered'>
-                    <span className='cur kwork-icon icon-heart icon-heart-card icon-heart--card'>
-                      <svg>
-                        <use href='#svg-like-heart'></use>
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          ))}
         </section>
       </section>
     </>
