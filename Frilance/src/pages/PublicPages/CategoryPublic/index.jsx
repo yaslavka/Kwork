@@ -6,6 +6,7 @@ import starRating from '../../../assets/images/icons/user-level-top-rated.svg';
 // import { toast } from 'react-toastify';
 // import styles from './categoryPublick.module.scss';
 import { slider } from './mockData';
+import styles from './categoryPublick.module.scss';
 
 function CategoryPublic({ children }) {
   const location = useLocation();
@@ -76,7 +77,7 @@ function CategoryPublic({ children }) {
       <article>
         <div className='tagcloud standart_cat_header categories-header cat-fon-repeat'>
           <div className='kw-wrapper kw-wrapper--1536'>
-            <h1 className='catalog-header'>Дизайн логотипов</h1>
+            <h1 className={styles.catalogHeader}>Дизайн логотипов</h1>
           </div>
         </div>
         <div className='kw-wrapper kw-wrapper--1536'>

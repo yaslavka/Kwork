@@ -4466,7 +4466,7 @@ body.is-robot .recommendation-app {
     display: none
 }
 
-.tagcloud.standart_cat_header h1, .tagcloud.standart_cat_header h2 {
+.tagcloud.standart_cat_header h2 {
     color: #000
 }
 
@@ -4506,7 +4506,7 @@ body.is-robot .recommendation-app {
     position: inherit
 }
 
-.tagcloud h1, .tagcloud h2 {
+.tagcloud, .tagcloud h2 {
     color: #fff;
     font-family: Open Sans, sans-serif;
     font-size: 35px;
@@ -4581,12 +4581,6 @@ body.is-robot .recommendation-app {
     z-index: 1
 }
 
-.catalog-header {
-    font-size: 34px;
-    line-height: 40px;
-    margin-bottom: 0 !important;
-    text-align: left
-}
 
 .base-filters-block {
     padding-top: 24px !important
@@ -4744,12 +4738,6 @@ body.is-robot .recommendation-app {
     margin-top: 23px !important
 }
 
-.tagcloud.standart_cat_header h1 {
-    color: #111;
-    font-size: 34px !important;
-    font-weight: 600;
-    line-height: 40px !important
-}
 
 .tagcloud.standart_cat_header .bread-crump ol {
     display: -webkit-box;
@@ -8869,13 +8857,6 @@ body .footer {
 }
 
 @media (max-width: 767.98px) {
-    .catalog-header {
-        font-size: 27px;
-        line-height: 32px
-    }
-}
-
-@media (max-width: 767.98px) {
     .base-filters-block {
         padding-top: 0 !important
     }
@@ -9061,10 +9042,6 @@ body .footer {
 }
 
 @media (max-width: 767.98px) {
-    .tagcloud.standart_cat_header h1 {
-        font-size: 27px !important;
-        line-height: 32px !important
-    }
 
     .tagcloud.standart_cat_header .bread-crump {
         display: block;
