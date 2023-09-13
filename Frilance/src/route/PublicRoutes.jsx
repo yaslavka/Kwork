@@ -13,7 +13,7 @@ function PublicRoutes({history}) {
         <>
             <BrowserRouter history={history}>
                 <Router>
-                    <main>
+                    <div>
                         <HeaderPublic/>
                         <Switch>
                             {publicRouteConfig.map((route) => (
@@ -22,7 +22,7 @@ function PublicRoutes({history}) {
 
                             <Redirect to={r.root} />
                         </Switch>
-                    </main>
+                    </div>
                 </Router>
             </BrowserRouter>
         </>

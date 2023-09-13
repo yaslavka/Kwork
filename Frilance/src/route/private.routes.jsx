@@ -12,7 +12,7 @@ function PrivateRoutes({history}) {
         <>
             <BrowserRouter history={history}>
                 <Router>
-                    <main>
+                    <div>
                         <Switch>
                             {privateRouteConfig.map((route) => (
                                 <RouteWithSubRoutes key={route.id} {...omit(route, 'id')} />
@@ -20,7 +20,7 @@ function PrivateRoutes({history}) {
 
                             <Redirect to={r.root} />
                         </Switch>
-                    </main>
+                    </div>
                 </Router>
             </BrowserRouter>
         </>
