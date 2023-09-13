@@ -400,9 +400,9 @@ body {
     background: #f6f6f6;
     color: #000;
     font-family: Open Sans, Helvetica, sans-serif;
-    font-size: 14px;
+    /*font-size: 14px;*/
     font-weight: 400;
-    line-height: 22px;
+    /*line-height: 22px;*/
     margin: 0;
     overflow-y: scroll;
     padding: 0
@@ -497,10 +497,10 @@ h2, h3 {
     display: none
 }
 
-ul:not(.ul-outside) {
+/*ul:not(.ul-outside) {
     list-style-position: inside;
     margin-bottom: 4px
-}
+}*/
 
 .clearfix:after, .clearfix:before {
     clear: both;

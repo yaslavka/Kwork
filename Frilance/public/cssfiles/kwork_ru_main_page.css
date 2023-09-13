@@ -496,10 +496,10 @@ h2, h3 {
     display: none
 }
 
-ul:not(.ul-outside) {
+/*ul:not(.ul-outside) {
     list-style-position: inside;
     margin-bottom: 4px
-}
+}*/
 
 .clearfix:after, .clearfix:before {
     clear: both;

@@ -7,6 +7,7 @@ import starRating from '../../../assets/images/icons/user-level-top-rated.svg';
 // import styles from './categoryPublick.module.scss';
 import { slider } from './mockData';
 import styles from './categoryPublick.module.scss';
+import rightArrow from '../../../assets/images/arrow-right.svg';
 
 function CategoryPublic({ children }) {
   const location = useLocation();
@@ -24,55 +25,52 @@ function CategoryPublic({ children }) {
     },[location.pathname])*/
   return (
     <>
-      <article className='tagcloud standart_cat_header cat-fon-repeat'>
-        <div className='kw-wrapper kw-wrapper--1536'>
-          <div className='bread-crump block-response bread-crump--pretty'>
-            <ol className='mb0' itemScope='itemScope' itemType='http://schema.org/BreadcrumbList'>
-              <li
-                itemProp='itemListElement'
-                itemScope='itemScope'
-                itemType='http://schema.org/ListItem'
-                data-item-type='category'
-                data-level='1'>
-                <Link to='https://kwork.ru/categories/design' data-href='https://kwork.ru/categories/design'>
-                  <span itemProp='name' className='bread-crumb-title'>
-                    Дизайн
-                  </span>
-                </Link>
-                <meta itemProp='position' content='2' />
-              </li>
-              <li
-                itemProp='itemListElement'
-                itemScope='itemScope'
-                itemType='http://schema.org/ListItem'
-                data-item-type='category'
-                data-level='2'>
-                <Link
-                  itemProp='item'
-                  to='https://kwork.ru/categories/logo'
-                  data-href='https://kwork.ru/categories/logo'>
-                  <span itemProp='name' className='bread-crumb-title'>
-                    Логотип и брендинг
-                  </span>
-                </Link>
-                <meta itemProp='position' content='2' />
-              </li>
-              <li
-                itemProp='itemListElement'
-                itemScope='itemScope'
-                itemType='http://schema.org/ListItem'
-                data-item-type='attribute'
-                data-level='1'>
-                <Link itemProp='item' to='https://kwork.ru/categories/logo/logotipy'>
-                  <span itemProp='name' className='bread-crumb-title'>
-                    Логотипы
-                  </span>
-                </Link>
-                <meta itemProp='position' content='3' />
-              </li>
-            </ol>
-          </div>
-        </div>
+      <article className={styles.breadcrumbs}>
+        <ul className={styles.breadcrumbsUl} itemScope='itemScope' itemType='http://schema.org/BreadcrumbList'>
+          <li
+            className={styles.breadcrumbsLi}
+            itemProp='itemListElement'
+            itemScope='itemScope'
+            itemType='http://schema.org/ListItem'
+            data-item-type='category'
+            data-level='1'>
+            <Link to='https://kwork.ru/categories/design' data-href='https://kwork.ru/categories/design'>
+              <span itemProp='name' className={styles.breadCrumbTitle}>
+                Дизайн
+              </span>
+            </Link>
+            <img src={rightArrow} alt='right-arrow' />
+            <meta itemProp='position' content='2' />
+          </li>
+          <li
+            className={styles.breadcrumbsLi}
+            itemProp='itemListElement'
+            itemScope='itemScope'
+            itemType='http://schema.org/ListItem'
+            data-item-type='category'
+            data-level='2'>
+            <Link itemProp='item' to='https://kwork.ru/categories/logo' data-href='https://kwork.ru/categories/logo'>
+              <span itemProp='name' className={styles.breadCrumbTitle}>
+                Логотип и брендинг
+              </span>
+            </Link>
+            <img src={rightArrow} alt='right-arrow' />
+            <meta itemProp='position' content='2' />
+          </li>
+          <li
+            itemProp='itemListElement'
+            itemScope='itemScope'
+            itemType='http://schema.org/ListItem'
+            data-item-type='attribute'
+            data-level='1'>
+            <Link itemProp='item' to='https://kwork.ru/categories/logo/logotipy'>
+              <span itemProp='name' className={styles.breadCrumbTitle}>
+                Логотипы
+              </span>
+            </Link>
+            <meta itemProp='position' content='3' />
+          </li>
+        </ul>
       </article>
       <article>
         <div className='tagcloud standart_cat_header categories-header cat-fon-repeat'>
@@ -1614,9 +1612,7 @@ function CategoryPublic({ children }) {
                       title=''
                       className=''>
                       {' '}
-                      <span className='first-letter breakwords force-font force-font--s14'>
-                        {item.title}
-                      </span>
+                      <span className='first-letter breakwords force-font force-font--s14'>{item.title}</span>
                     </a>
                   </p>
                   <div className='kwork-card-item__info kwork-card-item__info--from'>
@@ -1637,16 +1633,15 @@ function CategoryPublic({ children }) {
                           data-user-id='13104'
                           className='js-user-online-block dot-user-status track--item__title-status dot-user-offline is-init'></i>
                         <span className='user-avatar t-user-avatar'>
-                          <img
-                            src={item.user.avatar}
-                            alt='avatar'
-                            className='user-avatar__picture rounded'
-                          />
+                          <img src={item.user.avatar} alt='avatar' className='user-avatar__picture rounded' />
                         </span>
                       </div>
                       <div className='kwork-card-item__user-link-wrap'>
                         <div className='d-flex justify-content-between align-items-center'>
-                          <Link to={`/user/${item.user.userName}`} title={`${item.user.userName}`} className='oneline-faded'>
+                          <Link
+                            to={`/user/${item.user.userName}`}
+                            title={`${item.user.userName}`}
+                            className='oneline-faded'>
                             {item.user.userName}
                           </Link>
                           <div className='kwork-card-item__rating cusongsblock-panel__rating d-flex align-items-center'>
@@ -1654,15 +1649,19 @@ function CategoryPublic({ children }) {
                               <li className='mr2 v-align-m'>
                                 <i aria-hidden='true' className='fa fa-star gold'></i>
                               </li>
-                              <li className='rating-block__rating-item--number fw600 v-align-m'>{item.user.gradeRating}</li>
+                              <li className='rating-block__rating-item--number fw600 v-align-m'>
+                                {item.user.gradeRating}
+                              </li>
                             </ul>
-                            <span className='rating-block__count rating-block__count-star'>({item.user.countRating})</span>
+                            <span className='rating-block__count rating-block__count-star'>
+                              ({item.user.countRating})
+                            </span>
                           </div>
                         </div>
                         <div className='kwork-card-item__user-level-wrap kwork-card-item__user-level-wrap--2'>
                           <span className='kwork-card-item__user-level has-tooltip' data-original-title='null'>
                             <span className='kwork-card-item__user-level-icon'>
-                              <img src={starRating} alt="rating star"/>
+                              <img src={starRating} alt='rating star' />
                             </span>
                             {item.user.titleRating}
                           </span>
@@ -1686,436 +1685,6 @@ function CategoryPublic({ children }) {
         </section>
       </section>
     </>
-    /*<div>
-      <div className='all_page page-flex__content pt0 is_cat'></div>
-      <div id='event_list' className='event-list js-event-list'></div>
-
-      <div id='fox_notification_block'></div>
-
-      <div className='js-cetegories-preloaders'>
-        <div className='tagcloud standart_cat_header cat-fon-repeat t-align-l'>
-          <div className='kw-wrapper kw-wrapper--1536'>
-            <div className='bread-crump block-response bread-crump--pretty'>
-              <img
-                className='m-visible'
-                src='https://cdn-edge.kwork.ru/images/categories/preloaders/breadcrumbs-mob.svg'
-                alt='placeholder'
-              />
-              <img
-                className='m-hidden'
-                src='https://cdn-edge.kwork.ru/images/categories/preloaders/breadcrumbs-desktop.svg'
-                alt='placeholder'
-              />
-            </div>
-            <div className='catalog-header lh13'>
-              <img
-                className='m-visible'
-                src='https://cdn-edge.kwork.ru/images/categories/preloaders/title-mob.svg'
-                alt='placeholder'
-              />
-              <img
-                className='m-hidden'
-                src='https://cdn-edge.kwork.ru/images/categories/preloaders/title-desktop.svg'
-                alt='placeholder'
-              />
-            </div>
-          </div>
-        </div>
-        <div className='kw-wrapper kw-wrapper--1536'>
-          <div className='cat-header-tags mt16'>
-            <img src='https://cdn-edge.kwork.ru/images/categories/preloaders/tags.svg' alt='tags' />
-          </div>
-        </div>
-        <div className='m-hidden kw-wrapper kw-wrapper--1536'>
-          <img className='mw100' src='https://cdn-edge.kwork.ru/images/categories/preloaders/sort.svg' alt='tags' />
-        </div>
-        <div className='clear'></div>
-        <div className='page-filters kw-wrapper kw-wrapper--1536 kwork-list-cards kwork-list-cards--wide'>
-          <div className='left-col js-kworks-filter-button-parent page-filters__filters'>
-            <img
-              className='mw100 m-hidden'
-              src='https://cdn-edge.kwork.ru/images/categories/preloaders/filter.svg'
-              alt='filter'
-            />
-            <img
-              className='mw100 m-visible'
-              src='https://cdn-edge.kwork.ru/images/categories/preloaders/mob-filter.svg'
-              alt='mob filter'
-            />
-          </div>
-          <div className='right-col page-filters__content page-filters__content--preloader'>
-            <div className='cusongslist clearfix kwork-card-data-wrap kwork-list-table'>
-              <div>
-                <img
-                  className='mw100 m-hidden'
-                  src='https://cdn-edge.kwork.ru/pics/t4/32/19261672-64db3b89277e4.webp'
-                  alt='kwork-table'
-                />
-                <img
-                  className='mw100 m-visible'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table-mob.svg'
-                  alt='kwork-table'
-                />
-              </div>
-              <div>
-                <img
-                  className='mw100 m-hidden'
-                  src='https://cdn-edge.kwork.ru/pics/t4/25/8204971-1656404493.webp'
-                  alt='kwork-table'
-                />
-                <img
-                  className='mw100 m-visible'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table-mob.svg'
-                  alt='kwork-table'
-                />
-              </div>
-              <div>
-                <img
-                  className='mw100 m-hidden'
-                  src='https://cdn-edge.kwork.ru/pics/t4/23/3334907-1634330731.webp'
-                  alt='kwork-table'
-                />
-                <img
-                  className='mw100 m-visible'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table-mob.svg'
-                  alt='kwork-table'
-                />
-              </div>
-              <div>
-                <img
-                  className='mw100 m-hidden'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table.svg'
-                  alt='kwork-table'
-                />
-                <img
-                  className='mw100 m-visible'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table-mob.svg'
-                  alt='kwork-table'
-                />
-              </div>
-              <div>
-                <img
-                  className='mw100 m-hidden'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table.svg'
-                  alt='kwork-table'
-                />
-                <img
-                  className='mw100 m-visible'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table-mob.svg'
-                  alt='kwork-table'
-                />
-              </div>
-              <div>
-                <img
-                  className='mw100 m-hidden'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table.svg'
-                  alt='kwork-table'
-                />
-                <img
-                  className='mw100 m-visible'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table-mob.svg'
-                  alt='kwork-table'
-                />
-              </div>
-              <div>
-                <img
-                  className='mw100 m-hidden'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table.svg'
-                  alt='kwork-table'
-                />
-                <img
-                  className='mw100 m-visible'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table-mob.svg'
-                  alt='kwork-table'
-                />
-              </div>
-              <div>
-                <img
-                  className='mw100 m-hidden'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table.svg'
-                  alt='kwork-table'
-                />
-                <img
-                  className='mw100 m-visible'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table-mob.svg'
-                  alt='kwork-table'
-                />
-              </div>
-              <div>
-                <img
-                  className='mw100 m-hidden'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table.svg'
-                  alt='kwork-table'
-                />
-                <img
-                  className='mw100 m-visible'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table-mob.svg'
-                  alt='kwork-table'
-                />
-              </div>
-              <div>
-                <img
-                  className='mw100 m-hidden'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table.svg'
-                  alt='kwork-table'
-                />
-                <img
-                  className='mw100 m-visible'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table-mob.svg'
-                  alt='kwork-table'
-                />
-              </div>
-              <div>
-                <img
-                  className='mw100 m-hidden'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table.svg'
-                  alt='kwork-table'
-                />
-                <img
-                  className='mw100 m-visible'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table-mob.svg'
-                  alt='kwork-table'
-                />
-              </div>
-              <div>
-                <img
-                  className='mw100 m-hidden'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table.svg'
-                  alt='kwork-table'
-                />
-                <img
-                  className='mw100 m-visible'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table-mob.svg'
-                  alt='kwork-table'
-                />
-              </div>
-              <div>
-                <img
-                  className='mw100 m-hidden'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table.svg'
-                  alt='kwork-table'
-                />
-                <img
-                  className='mw100 m-visible'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table-mob.svg'
-                  alt='kwork-table'
-                />
-              </div>
-              <div>
-                <img
-                  className='mw100 m-hidden'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table.svg'
-                  alt='kwork-table'
-                />
-                <img
-                  className='mw100 m-visible'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table-mob.svg'
-                  alt='kwork-table'
-                />
-              </div>
-              <div>
-                <img
-                  className='mw100 m-hidden'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table.svg'
-                  alt='kwork-table'
-                />
-                <img
-                  className='mw100 m-visible'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table-mob.svg'
-                  alt='kwork-table'
-                />
-              </div>
-              <div>
-                <img
-                  className='mw100 m-hidden'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table.svg'
-                  alt='kwork-table'
-                />
-                <img
-                  className='mw100 m-visible'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table-mob.svg'
-                  alt='kwork-table'
-                />
-              </div>
-              <div>
-                <img
-                  className='mw100 m-hidden'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table.svg'
-                  alt='kwork-table'
-                />
-                <img
-                  className='mw100 m-visible'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table-mob.svg'
-                  alt='kwork-table'
-                />
-              </div>
-              <div>
-                <img
-                  className='mw100 m-hidden'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table.svg'
-                  alt='kwork-table'
-                />
-                <img
-                  className='mw100 m-visible'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table-mob.svg'
-                  alt='kwork-table'
-                />
-              </div>
-              <div>
-                <img
-                  className='mw100 m-hidden'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table.svg'
-                  alt='kwork-table'
-                />
-                <img
-                  className='mw100 m-visible'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table-mob.svg'
-                  alt='kwork-table'
-                />
-              </div>
-              <div>
-                <img
-                  className='mw100 m-hidden'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table.svg'
-                  alt='kwork-table'
-                />
-                <img
-                  className='mw100 m-visible'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table-mob.svg'
-                  alt='kwork-table'
-                />
-              </div>
-              <div>
-                <img
-                  className='mw100 m-hidden'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table.svg'
-                  alt='kwork-table'
-                />
-                <img
-                  className='mw100 m-visible'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table-mob.svg'
-                  alt='kwork-table'
-                />
-              </div>
-              <div>
-                <img
-                  className='mw100 m-hidden'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table.svg'
-                  alt='kwork-table'
-                />
-                <img
-                  className='mw100 m-visible'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table-mob.svg'
-                  alt='kwork-table'
-                />
-              </div>
-              <div>
-                <img
-                  className='mw100 m-hidden'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table.svg'
-                  alt='kwork-table'
-                />
-                <img
-                  className='mw100 m-visible'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table-mob.svg'
-                  alt='kwork-table'
-                />
-              </div>
-              <div>
-                <img
-                  className='mw100 m-hidden'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table.svg'
-                  alt='kwork-table'
-                />
-                <img
-                  className='mw100 m-visible'
-                  src='https://cdn-edge.kwork.ru/images/categories/preloaders/kwork-table-mob.svg'
-                  alt='kwork-table'
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/!*<div id="app">
-                    <categories-view ref="categoriesView"></categories-view>
-                </div>*!/}
-    </div>*/
-    /*<>
-      {categoryPublicises ? (
-        <>
-          <div className={'all_page page-flex__content pt0'}>
-            <div id='event_list' className='event-list js-event-list' />
-            <div id='fox_notification_block' />
-            <div className={'page-parent-category'}>
-              <div className='page-parent-category__header'>
-                sdfvsdfv
-                <h1>{t(`${categoryPublicises[0].label}`)}</h1>
-                <div>{t(`${categoryPublicises[0].subLabel}`)}</div>
-              </div>
-              <div className={'lg-centerwrap clearfix centerwrap'}>
-                <div className={'subcategories-wrapper'}>
-                  <div className={'subcategories-list m-hidden'}>
-                    {categoryPublicises.map((category) => (
-                      <>
-                        <div className='subcategories-list__title'>{category.label}</div>
-                        {category.categoryType.map((categoryType) => (
-                          <>
-                            <span className='subcategories-list__subtitle'>{categoryType.title}</span>
-                            {categoryType.subCategory.map((subCategory) => (
-                              <>
-                                <Link
-                                  className='subcategories-list__link'
-                                  to='https://kwork.ru/categories/logo/logotipy'>
-                                  {subCategory.label}
-                                </Link>
-                              </>
-                            ))}
-                          </>
-                        ))}
-                      </>
-                    ))}
-                  </div>
-                  <div className={'subcategories-collage'}>
-                    <div className={'collageSubcategories firstSubcategories-3'}>
-                      {categoryPublicises[0].categoryType && (
-                        <>
-                          {categoryPublicises[0].categoryType.map((categoryType) => (
-                            <>
-                              {categoryType.subCategory.map((subCategory) => (
-                                <>
-                                  {subCategory.images ? (
-                                    <>
-                                      <div className='collageSubcategories-col cards-layout-item'>
-                                        <Link to={subCategory.route} className='collageSubcategories-item'>
-                                          <picture>
-                                            <img src={`${categoryImage}/${subCategory.images}`} alt='Логотипы' />
-                                          </picture>
-                                        </Link>
-                                      </div>
-                                    </>
-                                  ) : (
-                                    <></>
-                                  )}
-                                </>
-                              ))}
-                            </>
-                          ))}
-                        </>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </>
-      ) : (
-        <></>
-      )}
-      {children}
-    </>*/
   );
 }
 export default CategoryPublic;

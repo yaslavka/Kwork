@@ -1,10 +1,60 @@
+@use './src/scss/_const' as *;
+
 .catalogHeader {
   font-size: 34px;
   line-height: 40px;
-  margin-bottom: 0 !important;
+  margin-bottom: 0;
   text-align: left;
   @media (max-width: 767px) {
     font-size: 27px;
     line-height: 32px;
   }
+}
+.breadcrumbs {
+  color: #fff;
+  font-family: Open Sans, sans-serif;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 18px;
+  max-width: 950px;
+  position: relative;
+  z-index: 1;
+  padding-top: 23px;
+  background-size: cover;
+  //max-width: 1288px;
+  padding-left: 24px;
+  padding-right: 24px;
+  //max-width: 1478px;
+  @media (max-width: 768px) {
+    font-size: 13px;
+    padding-left: 16px;
+    padding-right: 16px
+  }
+}
+.breadCrumbTitle {
+  color: $text;
+  line-height: 18px;
+  font-size: 14px;
+  &:hover {
+    color: $hover;
+  }
+}
+.breadcrumbsUl {
+  display: flex;
+  gap: 8px;
+}
+.breadcrumbsLi {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  & img {
+    margin-top: 3px;
+  }
+}
+.blockResponse,
+.contentArea,
+.sidebarArea {
+  //float: none;
+  //margin-top: -1px;
+  //width: 100%;
 }
