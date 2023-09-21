@@ -101,45 +101,39 @@ function HeaderPublic() {
                 <div className='suggestions' />
               </div>
             </div>
-            <div>
-              <div>
-                <span>
-                  <i className='circle-online' />
-                  Пользователей онлайн: 1083
-                </span>
+            <aside>
+              <div className={styles.usersInfo}>
+                <p className={styles.dotsGreen} />
+                <span className={styles.userDesc}>Пользователей онлайн: 1083</span>
               </div>
-              <div>
-                <span>
-                  <i />
-                  Последний заказ: 40 сек. назад
-                </span>
+              <div className={styles.usersInfo}>
+                <p className={styles.dotsBlue} />
+                <span className={styles.userDesc}>Последний заказ: 40 сек. назад</span>
               </div>
-            </div>
-            <ul id='app-header-select' className={styles.loginBox}>
-              <li
-                role={'button'}
+            </aside>
+            <article id='app-header-select' className={styles.loginBox}>
+              <button
+                className={styles.logIn}
+                type='button'
                 onClick={() => {
                   setModalAuth(true);
                   document.getElementById('body').classList.add('modal-open');
                 }}>
-                <Link to={'#'} className='login-js'>
-                  Вход
-                </Link>
-              </li>
-              <li
-                role={'button'}
+                Вход
+              </button>
+              <Link
+                className={styles.registrationBtn}
+                to={r.signUp}
                 onClick={() => {
                   setModalSignUp(true);
                   document.getElementById('body').classList.add('modal-open');
                 }}>
-                <Link to={r.signUp}>Регистрация</Link>
-              </li>
-              <li>
-                <a href='https://kwork.ru/for-sellers' className='pr0'>
-                  Фрилансеру
-                </a>
-              </li>
-            </ul>
+                Регистрация
+              </Link>
+              <a className={styles.logIn} href='https://kwork.ru/for-sellers'>
+                Фрилансеру
+              </a>
+            </article>
           </article>
         </section>
         <div>

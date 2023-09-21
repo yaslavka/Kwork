@@ -1,7 +1,7 @@
 @use './src/scss/_const' as *;
 
 .header {
-  max-width: 1304px;
+  max-width: 1494px;
   padding: 32px;
   margin: 0 auto;
 }
@@ -10,6 +10,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  column-gap: 16px;
 }
 .logoDesc {
   font-size: 9px;
@@ -23,6 +24,34 @@
   position: relative;
   display: flex;
   align-items: center;
+}
+.dotsGreen,
+.dotsBlue {
+  width: 5px;
+  height: 5px;
+  background-color: $btnBg;
+  border-radius: 50%;
+}
+.userDesc {
+  font-size: 12px;
+  line-height: 16px;
+  color: $text;
+  opacity: 0.7;
+  text-shadow: 0 0 0 #909090;
+}
+.dotsBlue {
+  background-color: $dots;
+}
+.usersInfo {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+}
+.logIn {
+  color: #111;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
 }
 .imgSearch {
   position: absolute;
@@ -38,7 +67,8 @@
   line-height: 22px;
   padding: 8px 105px 8px 36px;
 }
-.findBtn {
+.findBtn,
+.registrationBtn {
   border-radius: 0 4px 4px 0;
   font-weight: 400;
   padding: 5px 16px;
@@ -51,5 +81,12 @@
 }
 .loginBox {
   display: flex;
+  align-items: center;
+  column-gap: 24px;
+  margin-left: auto;
+}
+.registrationBtn {
+  border-radius: 4px;
+  padding: 10px 24px;
 }
 
