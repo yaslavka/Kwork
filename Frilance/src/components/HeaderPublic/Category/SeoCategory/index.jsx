@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import styles from '../../header.module.scss';
 
-function SeoCategory({ listItem }) {
+function SeoCategory({ listItem, left }) {
   const [it, setIt] = useState(false);
   return (
     <>
       <li
-        className={'js-cat-menu-thin-item'}
+        className={styles.liMenuItem}
         onClick={() => setIt(false)}
         onMouseOver={() => setIt(true)}
         onMouseOut={() => setIt(false)}>
@@ -17,11 +18,11 @@ function SeoCategory({ listItem }) {
               ? 'js-category-menu-item category-menu__list-item js-cat-menu-thin-link category-menu__list-item--hover'
               : 'js-category-menu-item category-menu__list-item js-cat-menu-thin-link'
           }>
-          <span className='js-cat-menu-thin-span category-menu__list__inner category-menu__list__inner--new'>
+          <span className={styles.itemMenu}>
             {listItem.seo.label}
           </span>
         </Link>
-        <div style={{ opacity: 1, display: it ? 'block' : 'none' }} className={'menubox menubox-all'}>
+        <div className={styles.menuBox} style={{ left: `${left}px`}}>
           <div className={'menulist'} style={{ left: 0 }}>
             <div className={'submenu submenu--new'}>
               {listItem.seo.col1 && (

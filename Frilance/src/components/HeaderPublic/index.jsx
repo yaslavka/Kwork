@@ -35,6 +35,19 @@ function HeaderPublic() {
         toast.error(error.message);
       });
   }, []);
+
+  const liArray = [
+    { section: <DesignCategory listItem={listItem} left={-5} />, id: 0 },
+    { section: <ItCategory listItem={listItem} left={-11} />, id: 1 },
+    { section: <TextCategory listItem={listItem} left={-11} />, id: 2 },
+    { section: <SeoCategory listItem={listItem} left={-11} />, id: 3 },
+    { section: <SocialCategory listItem={listItem} left={-11} />, id: 4 },
+    { section: <AudioVideoCategory listItem={listItem} left={-11} />, id: 5 },
+    { section: <BusinessLifeCategory listItem={listItem} left={-465} />, id: 6 },
+  ];
+
+  const [activeMenuId, setActiveMenuId] = useState(null);
+
   return (
     <>
       {modalAuth && <AuthModal setModalAuth={setModalAuth} setModalSignUp={setModalSignUp} />}
@@ -136,23 +149,19 @@ function HeaderPublic() {
             </article>
           </article>
         </section>
-        <div>
-          <div>
-            <ul>
-              {listItem && (
-                <>
-                  <DesignCategory listItem={listItem} />
-                  <ItCategory listItem={listItem} />
-                  <TextCategory listItem={listItem} />
-                  <SeoCategory listItem={listItem} />
-                  <SocialCategory listItem={listItem} />
-                  <AudioVideoCategory listItem={listItem} />
-                  <BusinessLifeCategory listItem={listItem} />
-                </>
-              )}
+        <section className={styles.menuWrapper}>
+          {listItem && (
+            <ul className={styles.menu}>
+              {liArray.map((item, index) => (
+                <li
+                  key={index}
+                >
+                  {item.section}
+                </li>
+              ))}
             </ul>
-          </div>
-        </div>
+          )}
+        </section>
       </header>
     </>
   );
