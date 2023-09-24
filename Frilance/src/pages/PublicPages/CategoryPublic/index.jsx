@@ -23,6 +23,9 @@ function CategoryPublic({ children }) {
                 toast.error(error.message)
             })
     },[location.pathname])*/
+
+
+  // пакедава
   return (
     <>
       <article className={styles.breadcrumbs}>
