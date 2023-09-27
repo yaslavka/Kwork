@@ -145,7 +145,8 @@
 }
 
 .menuItemActive {}
-.firstMenuBox {
+.firstMenuBox,
+.borderRightNone {
   max-width: fit-content;
   width: 100%;
   border-right: 1px solid #ccc;
@@ -154,6 +155,11 @@
     padding-left: 32px;
   }
   &:nth-child(3) {
+    border-right: none;
+  }
+}
+.borderRightNone {
+  &:nth-child(2) {
     border-right: none;
   }
 }

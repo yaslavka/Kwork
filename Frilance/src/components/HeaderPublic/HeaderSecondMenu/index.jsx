@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from './header.module.scss';
 
 function HeaderSecondMenu({ listItem, left }) {
+  console.log('listItem >>>', listItem.col3);
   return (
     <section className={styles.liMenuItem}>
       <Link to={`${listItem.route}`}>
@@ -35,7 +36,7 @@ function HeaderSecondMenu({ listItem, left }) {
           </div>
         )}
         {listItem.col2 && (
-          <div className={styles.firstMenuBox}>
+          <div className={`${listItem.col3 ? styles.firstMenuBox :styles.borderRightNone }`}>
             {listItem.col2.map((col2, index) => (
               <div className={styles.linkBox} key={index}>
                 <h4 className={styles.titleDropMenu}>{col2.title}</h4>
