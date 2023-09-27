@@ -5,13 +5,13 @@ import styles from '../../header.module.scss';
 function ItCategory({ listItem, left }) {
   return (
     <section className={styles.liMenuItem}>
-      <Link to={`${listItem.it.route}`}>
-        <span className={styles.itemMenu}>{listItem.it.label}</span>
+      <Link to={`${listItem.route}`}>
+        <span className={styles.itemMenu}>{listItem.label}</span>
       </Link>
       <div className={styles.menuBox} style={{ left: `${left}px` }}>
-        {listItem.it.col1 && (
+        {listItem.col1 && (
           <div className={styles.firstMenuBox}>
-            {listItem.it.col1.map((col1, index) => (
+            {listItem.col1.map((col1, index) => (
               <div className={styles.linkBox} key={index}>
                 <h4 className={styles.titleDropMenu}>{col1.title}</h4>
                 {col1.subCategory.map((subCategory, index) => (
@@ -34,9 +34,9 @@ function ItCategory({ listItem, left }) {
             ))}
           </div>
         )}
-        {listItem.it.col2 && (
+        {listItem.col2 && (
           <div className={styles.firstMenuBox}>
-            {listItem.it.col2.map((col2, index) => (
+            {listItem.col2.map((col2, index) => (
               <div className={styles.linkBox} key={index}>
                 <h4 className={styles.titleDropMenu}>{col2.title}</h4>
                 {col2.subCategory.map((subCategory, index) => (
@@ -61,9 +61,9 @@ function ItCategory({ listItem, left }) {
             ))}
           </div>
         )}
-        {listItem?.it.col3 && (
+        {listItem.col3 && (
           <div className={styles.firstMenuBox}>
-            {listItem.it.col3.map((col3, index) => (
+            {listItem.col3.map((col3, index) => (
               <div className={styles.linkBox} key={index}>
                 <h4 className={styles.titleDropMenu}>{col3.title}</h4>
                 {col3.subCategory.map((subCategory, index) => (

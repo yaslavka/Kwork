@@ -37,17 +37,17 @@ function HeaderPublic() {
   }, []);
 
   const liArray = [
-    { section: <DesignCategory listItem={listItem} left={-5} />, id: 0 },
-    { section: <ItCategory listItem={listItem} left={-11} />, id: 1 },
-    { section: <TextCategory listItem={listItem} left={-11} />, id: 2 },
-    { section: <SeoCategory listItem={listItem} left={-11} />, id: 3 },
-    { section: <SocialCategory listItem={listItem} left={-11} />, id: 4 },
-    { section: <AudioVideoCategory listItem={listItem} left={-11} />, id: 5 },
-    { section: <BusinessLifeCategory listItem={listItem} left={-465} />, id: 6 },
+    { section: <ItCategory listItem={listItem?.design} left={-5} />, id: 0 },
+    { section: <ItCategory listItem={listItem?.it} left={-11} />, id: 1 },
+    { section: <ItCategory listItem={listItem?.text} left={-11} />, id: 2 },
+    { section: <ItCategory listItem={listItem?.seo} left={-11} />, id: 3 },
+    { section: <ItCategory listItem={listItem?.social} left={-11} />, id: 4 },
+    { section: <ItCategory listItem={listItem?.audio} left={-11} />, id: 5 },
+    { section: <ItCategory listItem={listItem?.business} left={-465} />, id: 6 },
   ];
 
   const [activeMenuId, setActiveMenuId] = useState(null);
-
+  console.log('listItem >>', listItem);
   return (
     <>
       {modalAuth && <AuthModal setModalAuth={setModalAuth} setModalSignUp={setModalSignUp} />}
