@@ -112,7 +112,7 @@
   margin: 9px 0;
   border-right: 1px solid $border;
   &:hover .menuBox {
-    display: block;
+    display: flex;
   }
   &:before {
     position: absolute;
@@ -127,6 +127,14 @@
 /*li:last-child .liMenuItem {
   border-right: none;
 }*/
+.titleDropMenu {
+  color: #303030;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: unset;
+  white-space: nowrap;
+}
 .menuBox {
   display: none;
   position: absolute;
@@ -136,11 +144,40 @@
   background-color: $white;
   border: 1px solid $border;
   min-width: 150px;
-  padding: 15px 0;
+  padding: 15px 32px;
 }
 
 .menuItemActive {
   //display: block;
+}
+.firstMenuBox {
+  max-width: fit-content;
+  width: 100%;
+  border-right: 1px solid #ccc;
+  &:nth-child(2),
+  &:nth-child(3) {
+    padding-left: 32px;
+  }
+  &:nth-child(3) {
+    border-right: none;
+  }
+}
+.linkBox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 8px;
+  padding-right: 32px;
+}
+.submenuItem {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+}
+.menuDesc {
+  color: #000;
+  line-height: 22px;
+  font-size: 14px;
 }
 
 /* Стили для скрытия меню */
