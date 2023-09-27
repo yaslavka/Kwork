@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../../header.module.scss';
 
-function ItCategory({ listItem, left }) {
+function HeaderSecondMenu({ listItem, left }) {
   return (
     <section className={styles.liMenuItem}>
       <Link to={`${listItem.route}`}>
@@ -92,4 +92,4 @@ function ItCategory({ listItem, left }) {
     </section>
   );
 }
-export default ItCategory;
+export default HeaderSecondMenu;

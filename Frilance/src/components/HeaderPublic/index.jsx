@@ -6,13 +6,7 @@ import AuthModal from '../ModalAuth';
 import ModalSignUp from '../ModalSignUp';
 import { api } from '../../api';
 import { toast } from 'react-toastify';
-import DesignCategory from './Category/DesignCategory';
-import ItCategory from './Category/ItCategory';
-import TextCategory from './Category/TextCategory';
-import SeoCategory from './Category/SeoCategory';
-import SocialCategory from './Category/SocialCategory';
-import AudioVideoCategory from './Category/AudioVideoCategory';
-import BusinessLifeCategory from './Category/BusinessLifeCategory';
+import HeaderSecondMenu from './Category/HeaderSecondMenu';
 import search from '../../assets/images/header/icon-search.svg';
 import styles from './header.module.scss';
 
@@ -37,28 +31,20 @@ function HeaderPublic() {
   }, []);
 
   const liArray = [
-    { section: <ItCategory listItem={listItem?.design} left={-5} />, id: 0 },
-    { section: <ItCategory listItem={listItem?.it} left={-11} />, id: 1 },
-    { section: <ItCategory listItem={listItem?.text} left={-11} />, id: 2 },
-    { section: <ItCategory listItem={listItem?.seo} left={-11} />, id: 3 },
-    { section: <ItCategory listItem={listItem?.social} left={-11} />, id: 4 },
-    { section: <ItCategory listItem={listItem?.audio} left={-11} />, id: 5 },
-    { section: <ItCategory listItem={listItem?.business} left={-465} />, id: 6 },
+    { section: <HeaderSecondMenu listItem={listItem?.design} left={-5} />, id: 0 },
+    { section: <HeaderSecondMenu listItem={listItem?.it} left={-11} />, id: 1 },
+    { section: <HeaderSecondMenu listItem={listItem?.text} left={-11} />, id: 2 },
+    { section: <HeaderSecondMenu listItem={listItem?.seo} left={-11} />, id: 3 },
+    { section: <HeaderSecondMenu listItem={listItem?.social} left={-11} />, id: 4 },
+    { section: <HeaderSecondMenu listItem={listItem?.audio} left={-11} />, id: 5 },
+    { section: <HeaderSecondMenu listItem={listItem?.business} left={-465} />, id: 6 },
   ];
 
-  const [activeMenuId, setActiveMenuId] = useState(null);
-  console.log('listItem >>', listItem);
   return (
     <>
       {modalAuth && <AuthModal setModalAuth={setModalAuth} setModalSignUp={setModalSignUp} />}
       {modalSignUp && <ModalSignUp setModalAuth={setModalAuth} setModalSignUp={setModalSignUp} />}
       <header className={styles.header}>
-        {/*<div className={'recommendation-app js-recommendation-app'}>
-          <div className='recommendation-app__close js-recommendation-app-close' />
-          <div className={'recommendation-app__content'}>
-            <div className='recommendation-app__logo' />
-          </div>
-        </div>*/}
         <section className={styles.headerWrapper}>
           {/*Headermobile*/}
           <HeaderMobile setModalAuth={setModalAuth} setModalSignUp={setModalSignUp} />
