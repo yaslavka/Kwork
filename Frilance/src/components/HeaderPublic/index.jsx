@@ -32,12 +32,12 @@ function HeaderPublic() {
 
   const liArray = [
     { section: <HeaderSecondMenu listItem={listItem?.design} left={-5} />, id: 0 },
-    { section: <HeaderSecondMenu listItem={listItem?.it} left={-11} />, id: 1 },
-    { section: <HeaderSecondMenu listItem={listItem?.text} left={-11} />, id: 2 },
-    { section: <HeaderSecondMenu listItem={listItem?.seo} left={-11} />, id: 3 },
-    { section: <HeaderSecondMenu listItem={listItem?.social} left={-11} />, id: 4 },
-    { section: <HeaderSecondMenu listItem={listItem?.audio} left={-11} />, id: 5 },
-    { section: <HeaderSecondMenu listItem={listItem?.business} left={-465} />, id: 6 },
+    { section: <HeaderSecondMenu listItem={listItem?.it} left={-1} />, id: 1 },
+    { section: <HeaderSecondMenu listItem={listItem?.text} left={-1} />, id: 2 },
+    { section: <HeaderSecondMenu listItem={listItem?.seo} left={-1} />, id: 3 },
+    { section: <HeaderSecondMenu listItem={listItem?.social} left={-1} />, id: 4 },
+    { section: <HeaderSecondMenu listItem={listItem?.audio} left={-1} />, id: 5 },
+    { section: <HeaderSecondMenu listItem={listItem?.business} left={-467} />, id: 6 },
   ];
 
   return (
