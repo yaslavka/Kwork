@@ -1,22 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../../header.module.scss';
 
 function ItCategory({ listItem, left }) {
-  const [it, setIt] = useState(false);
   return (
-    <section
-      className={styles.liMenuItem}
-      onClick={() => setIt(false)}
-      onMouseOver={() => setIt(true)}
-      onMouseOut={() => setIt(false)}>
-      <Link
-        to={`${listItem.it.route}`}
-        className={
-          it
-            ? 'js-category-menu-item category-menu__list-item js-cat-menu-thin-link category-menu__list-item--hover'
-            : 'js-category-menu-item category-menu__list-item js-cat-menu-thin-link'
-        }>
+    <section className={styles.liMenuItem}>
+      <Link to={`${listItem.it.route}`}>
         <span className={styles.itemMenu}>{listItem.it.label}</span>
       </Link>
       <div className={styles.menuBox} style={{ left: `${left}px` }}>
@@ -61,7 +50,6 @@ function ItCategory({ listItem, left }) {
                           data-tooltip-text='Очень популярная рубрика'
                           data-tooltip-class='pointer-en'
                           data-tooltip-thidden='true'
-                          className='submenu-item__icon-img'
                           src='https://cdn-edge.kwork.ru/images/mobile_menu/fire.svg'
                           alt='Популярный раздел логотипы'
                         />
@@ -80,7 +68,6 @@ function ItCategory({ listItem, left }) {
                 <h4 className={styles.titleDropMenu}>{col3.title}</h4>
                 {col3.subCategory.map((subCategory, index) => (
                   <div key={index}>
-                    {/*<Link to={subCategory?.route} className={'submenu-item'}>*/}
                     <Link className={styles.submenuItem} to='#'>
                       <span className={styles.menuDesc}>{subCategory.label}</span>
                       {subCategory.icon && (
