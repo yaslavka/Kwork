@@ -38,7 +38,7 @@ function HeaderSecondMenu({ listItem, left }) {
         {listItem.col2 && (
           <div className={`${listItem.col3 ? styles.firstMenuBox :styles.borderRightNone }`}>
             {listItem.col2.map((col2, index) => (
-              <div className={styles.linkBox} key={index}>
+              <div className={`${listItem.col3 ? styles.linkBox : styles.linkBoxPaddingNone}`} key={index}>
                 <h4 className={styles.titleDropMenu}>{col2.title}</h4>
                 {col2.subCategory.map((subCategory, index) => (
                   <div key={index}>

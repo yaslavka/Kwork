@@ -158,17 +158,26 @@
     border-right: none;
   }
 }
+.firstMenuBox:last-child {
+  & .linkBox {
+    padding-right: 0;
+  }
+}
 .borderRightNone {
   &:nth-child(2) {
     border-right: none;
   }
 }
-.linkBox {
+.linkBox,
+.linkBoxPaddingNone {
   display: flex;
   flex-direction: column;
   gap: 8px;
   margin-bottom: 8px;
   padding-right: 32px;
+}
+.linkBoxPaddingNone {
+  padding-right: 0;
 }
 .submenuItem {
   display: flex;
