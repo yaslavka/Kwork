@@ -101,10 +101,25 @@
   padding: 10px 24px;
 }
 .itemMenu {
+  position: relative;
   color: $text;
   font-size: 14px;
   text-align: center;
   white-space: nowrap;
+  font-weight: 600;
+  &:hover {
+    transition: 0.2s ease-out;
+    color: $dots;
+  }
+  &:hover:before {
+    position: absolute;
+    content: '';
+    bottom: -13px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $dots;
+  }
 }
 .liMenuItem {
   position: relative;
@@ -112,7 +127,7 @@
   margin: 9px 0;
   border-right: 1px solid $border;
   &:hover .menuBox {
-    display: flex;
+    opacity: 1;
   }
   &:before {
     position: absolute;
@@ -133,7 +148,7 @@
   white-space: nowrap;
 }
 .menuBox {
-  display: none;
+  display: flex;
   position: absolute;
   top: 34px;
   left: -1px;
@@ -142,6 +157,8 @@
   border: 1px solid $border;
   min-width: 150px;
   padding: 15px 32px;
+  opacity: 0;
+  transition: 0.2s ease-in-out;
 }
 
 .menuItemActive {}
