@@ -6,9 +6,9 @@ import AuthModal from '../ModalAuth';
 import ModalSignUp from '../ModalSignUp';
 import { api } from '../../api';
 import { toast } from 'react-toastify';
-import HeaderSecondMenu from './Category/HeaderSecondMenu';
+import HeaderSecondMenu from './HeaderSecondMenu';
 import search from '../../assets/images/header/icon-search.svg';
-import styles from './header.module.scss';
+import styles from './HeaderSecondMenu/header.module.scss';
 
 function HeaderPublic() {
   const [modalAuth, setModalAuth] = useState(false);
@@ -46,7 +46,6 @@ function HeaderPublic() {
       {modalSignUp && <ModalSignUp setModalAuth={setModalAuth} setModalSignUp={setModalSignUp} />}
       <header className={styles.header}>
         <section className={styles.headerWrapper}>
-          {/*Headermobile*/}
           <HeaderMobile setModalAuth={setModalAuth} setModalSignUp={setModalSignUp} />
           <article className={styles.menuTop}>
             <aside>
@@ -76,7 +75,6 @@ function HeaderPublic() {
               <button className={styles.findBtn} type='button'>
                 Найти
               </button>
-              {/*<div className='ico-search-button' />*/}
               <div style={{ display: 'none' }}>
                 <div className='history d-flex justify-content-between'>
                   <div className='history__title'>
