@@ -24,7 +24,7 @@ function CategoryPublic({ children }) {
             })
     },[location.pathname])*/
   return (
-    <>
+    <section className={styles.designLogo}>
       <article className={styles.breadcrumbs}>
         <ul className={styles.breadcrumbsUl} itemScope='itemScope' itemType='http://schema.org/BreadcrumbList'>
           <li
@@ -73,33 +73,14 @@ function CategoryPublic({ children }) {
         </ul>
       </article>
       <article>
-        <div className='tagcloud standart_cat_header categories-header cat-fon-repeat'>
-          <div className='kw-wrapper kw-wrapper--1536'>
-            <h1 className={styles.catalogHeader}>Дизайн логотипов</h1>
-          </div>
-        </div>
-        <div className='kw-wrapper kw-wrapper--1536'>
-          <div className='cat-header-tags cat-header-tags--pretty mt16'>
-            <div className='cat-header-tags__wrap overflow-hidden js-cat-header-tags swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden'>
-              <div className='cat-header-tags__wrap-inner swiper-wrapper'>
-                <span className='cat-header-tags__item swiper-slide has-sub active swiper-slide-active'>
-                  Логотипы
-                  <span className='cat-header-tags__item-close'></span>
-                </span>
-                <span className='cat-header-tags__item swiper-slide swiper-slide-next'>
-                  Новый логотип
-                  <span className='cat-header-tags__item-close'></span>
-                </span>
-                <span className='cat-header-tags__item swiper-slide'>
-                  Доработка лого
-                  <span className='cat-header-tags__item-close'></span>
-                </span>
-              </div>
-            </div>
-            <div className='cat-header-tags__button left swiper-button-disabled js-cat-header-tags-btn-l swiper-button-lock'></div>
-            <div className='cat-header-tags__button right swiper-button-disabled js-cat-header-tags-btn-r swiper-button-lock'></div>
-          </div>
-        </div>
+        <h1 className={styles.catalogHeader}>Дизайн логотипов</h1>
+        <aside className={styles.menuBox}>
+          <button className={styles.menuItem} type='button'>Логотипы</button>
+          <button className={styles.menuItem} type='button'>Новый логотип</button>
+          <button className={styles.menuItem} type='button'>Доработка лого</button>
+        </aside>
+        <div className='cat-header-tags__button left swiper-button-disabled js-cat-header-tags-btn-l swiper-button-lock'></div>
+        <div className='cat-header-tags__button right swiper-button-disabled js-cat-header-tags-btn-r swiper-button-lock'></div>
       </article>
       <article className='base-filters-wrap'>
         <div className='kw-wrapper kw-wrapper--1536'>
@@ -1684,7 +1665,7 @@ function CategoryPublic({ children }) {
           ))}
         </section>
       </section>
-    </>
+    </section>
   );
 }
 export default CategoryPublic;

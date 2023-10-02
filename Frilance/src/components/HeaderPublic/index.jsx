@@ -138,6 +138,7 @@ function HeaderPublic() {
             <ul className={styles.menu}>
               {liArray.map((item, index) => (
                 <li
+                  className={styles.menuContainer}
                   key={index}
                 >
                   {item.section}

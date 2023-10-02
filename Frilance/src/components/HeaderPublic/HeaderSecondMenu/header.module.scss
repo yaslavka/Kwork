@@ -1,15 +1,22 @@
 @use './src/scss/_const' as *;
 
-.header {}
+.header {
+  margin-bottom: 32px;
+}
 .headerWrapper {
-  max-width: 1494px;
-  padding: 32px;
-  margin: 0 auto;
+  @extend %wrapper;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
 }
 .menuWrapper {
   position: relative;
   border-top: 1px solid #e2e2e2;
   border-bottom: 1px solid #e2e2e2;
+}
+.menuContainer {
+  width: 100%;
+  text-align: center;
 }
 .menu {
   display: flex;
@@ -123,10 +130,10 @@
 }
 .liMenuItem {
   position: relative;
-  padding: 0 47px;
   margin: 9px 0;
   border-right: 1px solid $border;
   &:hover .menuBox {
+    display: flex;
     opacity: 1;
   }
   &:before {
@@ -148,7 +155,7 @@
   white-space: nowrap;
 }
 .menuBox {
-  display: flex;
+  display: none;
   position: absolute;
   top: 34px;
   left: -1px;
@@ -189,8 +196,10 @@
 .linkBoxPaddingNone {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin-bottom: 8px;
+  align-items: flex-start;
+  column-gap: 8px;
+  row-gap: 4px;
+  margin-bottom: 16px;
   padding-right: 32px;
 }
 .linkBoxPaddingNone {
@@ -202,9 +211,32 @@
   column-gap: 16px;
 }
 .menuDesc {
+  position: relative;
   color: #000;
   line-height: 22px;
   font-size: 14px;
+  text-align: left;
+  white-space: nowrap;
+  transition: 0.2s ease-in;
+  &:before {
+    position: absolute;
+    z-index: 1;
+    content: '';
+    top: 0;
+    left: -32px;
+    width: 2.5px;
+    height: 23px;
+    background-color: $dots;
+    opacity: 0;
+    transition: 0.2s ease-in;
+  }
+  &:hover {
+    color: $dots;
+  }
+  &:hover:before {
+    //transition: 0.2s ease-in;
+    opacity: 1;
+  }
 }
 
 
