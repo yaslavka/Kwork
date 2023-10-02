@@ -1,13 +1,15 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import styles from './header.module.scss';
 
 function HeaderSecondMenu({ listItem, left }) {
+  const { t } = useTranslation('common');
   console.log('listItem >>>', listItem.col3);
   return (
     <section className={styles.liMenuItem}>
       <Link to={`${listItem.route}`}>
-        <span className={styles.itemMenu}>{listItem.label}</span>
+        <span className={styles.itemMenu}>{t(listItem.label)}</span>
       </Link>
       <div className={styles.menuBox} style={{ left: `${left}px` }}>
         {listItem.col1 && (
