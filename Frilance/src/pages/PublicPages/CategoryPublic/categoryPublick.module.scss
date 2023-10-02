@@ -2,6 +2,8 @@
 
 .designLogo {
   @extend %wrapper;
+  display: grid;
+  row-gap: 16px;
 }
 .catalogHeader {
   font-size: 34px;
@@ -23,14 +25,24 @@
   border: 1px solid #dfe1e6;
   border-radius: 4px;
   color: #111;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
   padding: 2px 8px;
   transition: 0.1s ease-in;
+  &:first-child {
+    background-color: $hoverBtn;
+    color: $white;
+  }
   &:hover {
     background-color: $hoverBtn;
     color: $white;
+  }
+}
+.menuItemDesc {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-right: 8px;
+  & ~ img {
+    opacity: 0.8;
   }
 }
 .breadcrumbs {
@@ -43,7 +55,6 @@
   position: relative;
   z-index: 1;
   background-size: cover;
-  margin-bottom: 16px;
   @media (max-width: 768px) {
     font-size: 13px;
     padding-left: 16px;
@@ -76,4 +87,28 @@
   //float: none;
   //margin-top: -1px;
   //width: 100%;
+}
+.designLogoWrapper {
+  display: flex;
+  column-gap: 24px;
+}
+.filters {
+  display: grid;
+  row-gap: 8px;
+}
+.filtersWrapper {
+
+}
+.title {
+  color: #ffa800;
+  font-size: 15px;
+  margin-bottom: 10px
+}
+.filterLink {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  font-size: 13px;
+  line-height: 18px;
+  color: black;
 }
