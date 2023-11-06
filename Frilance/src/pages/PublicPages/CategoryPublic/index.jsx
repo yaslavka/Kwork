@@ -18,6 +18,26 @@ const linkPrice = [
   { link: 'https://kwork.ru/categories/logo/logotipy?price=30000_', price: 'от 30 000 и выше' },
 ];
 
+const levelSalesman = [
+  { link:'https://kwork.ru/categories/logo/logotipy?sellerlvl=1', level: 'Восходящая звезда и выше' },
+  { link:'https://kwork.ru/categories/logo/logotipy?sellerlvl=2', level: 'Высший рейтинг и выше' },
+  { link:'https://kwork.ru/categories/logo/logotipy?sellerlvl=3', level: ' Высший рейтинг плюс' },
+];
+
+const sellerActivity = [
+  { link:'https://kwork.ru/categories/logo/logotipy?sonline=online', level: 'Онлайн' },
+  { link:'https://kwork.ru/categories/logo/logotipy?sonline=1', level: 'Заходил до 1 дн. назад' },
+  { link:'https://kwork.ru/categories/logo/logotipy?sonline=3', level: 'Заходил до 3 дн. назад' },
+  { link:'https://kwork.ru/categories/logo/logotipy?sonline=7', level: 'Заходил до 1 нед. назад' },
+  { link:'https://kwork.ru/categories/logo/logotipy?sonline=14', level: 'Заходил до 2 нед. назад' },
+];
+
+const positiveReviews = [
+  { link:'https://kwork.ru/categories/logo/logotipy?sminreview=1', level: 'От 1' },
+  { link:'https://kwork.ru/categories/logo/logotipy?sminreview=5', level: 'От 5' },
+  { link:'https://kwork.ru/categories/logo/logotipy?sminreview=20', level: 'От 20' },
+  { link:'https://kwork.ru/categories/logo/logotipy?sminreview=100', level: 'От 100' },
+];
 
 function CategoryPublic({ children }) {
   const location = useLocation();
@@ -521,7 +541,9 @@ function CategoryPublic({ children }) {
           <article className={styles.filtersWrapper}>
             <h3 className={styles.filterTitle}>Цена</h3>
             {linkPrice.map((item, index) => (
-              <a className={styles.filterLink} href={`${item.link}`} key={index}>{item.price}.</a>
+              <a className={styles.filterLink} href={`${item.link}`} key={index}>
+                {item.price}.
+              </a>
             ))}
             <div className='price-filter-inputs-block'>
               <div className='price-filter-input__box w100pi_mobile popup-filter__field'>
@@ -551,217 +573,30 @@ function CategoryPublic({ children }) {
               </div>
             </div>
           </article>
-
-          <div className='popup-filter__group'>
-            <h3 className='popup-filter__group-title m-visible'>
-              <span className='popup-filter__group-title-text'>Уровень продавца</span>{' '}
-              <i
-                data-tooltip-text='<p> Продавцы с уровнем «Восходящая звезда», «Высший рейтинг» и «Высший рейтинг плюс» - это те, кто уже зарекомендовал себя на Kwork, и кому можно доверять.</p> <p>Данные продавцы должны выполнить не менее 10 заказов, из них не менее 90% должны быть успешными.</p>'
-                data-tooltip-class='popup-filter__tooltip'
-                className='icon-question-outlined tooltipster cur popup-filter__group-title-icon'></i>
-            </h3>
-            <div className='card__content-column'>
-              <div className='card__content-header'>
-                <strong>Уровень продавца</strong>{' '}
-                <span className='wrap-tooltip_circle wrap-tooltip_circle--scale-16 ml0'>
-                  <span
-                    data-tooltip-side='right'
-                    data-tooltip-text='<p> Продавцы с уровнем «Восходящая звезда», «Высший рейтинг» и «Высший рейтинг плюс» - это те, кто уже зарекомендовал себя на Kwork, и кому можно доверять.</p> <p>Данные продавцы должны выполнить не менее 10 заказов, из них не менее 90% должны быть успешными.</p>'
-                    data-tooltip-theme='dark'
-                    className='tooltipster tooltip_circle tooltip_circle--light tooltip_circle--hover tooltip_circle--scale-16'>
-                    ?
-                  </span>
-                </span>
-              </div>
-              <div className='card__content-body popup-filter__props popup-filter__props-list'>
-                <div className='popup-filter__prop'>
-                  <input type='radio' name='sellerlvl' className='styled-radio popup-filter__radio' value='1' />
-                  <label className='popup-filter__radio-label'>
-                    <a
-                      href='https://kwork.ru/categories/logo/logotipy?sellerlvl=1'
-                      className='popup-filter__radio-link'>
-                      Восходящая звезда и выше
-                      <svg xmlns='http://www.w3.org/2000/svg' className='popup-filter__radio-cancel'>
-                        <path d='M7.562.438a.525.525 0 00-.743 0L4 3.258 1.18.438a.525.525 0 10-.742.743L3.258 4 .438 6.82a.525.525 0 10.743.742L4 4.742l2.82 2.82a.525.525 0 10.742-.743L4.742 4l2.82-2.82a.525.525 0 000-.742z'></path>
-                      </svg>
-                    </a>
-                  </label>
-                </div>
-                <div className='popup-filter__prop'>
-                  <input type='radio' name='sellerlvl' className='styled-radio popup-filter__radio' value='2' />
-                  <label className='popup-filter__radio-label'>
-                    <a
-                      href='https://kwork.ru/categories/logo/logotipy?sellerlvl=2'
-                      className='popup-filter__radio-link'>
-                      Высший рейтинг и выше
-                      <svg xmlns='http://www.w3.org/2000/svg' className='popup-filter__radio-cancel'>
-                        <path d='M7.562.438a.525.525 0 00-.743 0L4 3.258 1.18.438a.525.525 0 10-.742.743L3.258 4 .438 6.82a.525.525 0 10.743.742L4 4.742l2.82 2.82a.525.525 0 10.742-.743L4.742 4l2.82-2.82a.525.525 0 000-.742z'></path>
-                      </svg>
-                    </a>
-                  </label>
-                </div>
-                <div className='popup-filter__prop'>
-                  <input type='radio' name='sellerlvl' className='styled-radio popup-filter__radio' value='3' />
-                  <label className='popup-filter__radio-label'>
-                    <a
-                      href='https://kwork.ru/categories/logo/logotipy?sellerlvl=3'
-                      className='popup-filter__radio-link'>
-                      Высший рейтинг плюс
-                      <svg xmlns='http://www.w3.org/2000/svg' className='popup-filter__radio-cancel'>
-                        <path d='M7.562.438a.525.525 0 00-.743 0L4 3.258 1.18.438a.525.525 0 10-.742.743L3.258 4 .438 6.82a.525.525 0 10.743.742L4 4.742l2.82 2.82a.525.525 0 10.742-.743L4.742 4l2.82-2.82a.525.525 0 000-.742z'></path>
-                      </svg>
-                    </a>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className='popup-filter__group'>
-            <h3 className='popup-filter__group-title m-visible'>
-              <span className='popup-filter__group-title-text'>Активность продавцов</span>
-            </h3>
-            <div className='card__content-column'>
-              <div className='card__content-header'>
-                <strong>Активность продавцов</strong>
-              </div>
-              <div className='card__content-body popup-filter__props popup-filter__props-list'>
-                <div className='popup-filter__prop'>
-                  <input type='radio' name='sonline' className='styled-radio popup-filter__radio' value='online' />{' '}
-                  <label className='popup-filter__radio-label'>
-                    <a
-                      href='https://kwork.ru/categories/logo/logotipy?sonline=online'
-                      className='popup-filter__radio-link'>
-                      Онлайн
-                      <svg xmlns='http://www.w3.org/2000/svg' className='popup-filter__radio-cancel'>
-                        <path d='M7.562.438a.525.525 0 00-.743 0L4 3.258 1.18.438a.525.525 0 10-.742.743L3.258 4 .438 6.82a.525.525 0 10.743.742L4 4.742l2.82 2.82a.525.525 0 10.742-.743L4.742 4l2.82-2.82a.525.525 0 000-.742z'></path>
-                      </svg>
-                    </a>
-                  </label>
-                </div>
-                <div className='popup-filter__prop'>
-                  <input type='radio' name='sonline' className='styled-radio popup-filter__radio' value='1' />
-                  <label className='popup-filter__radio-label'>
-                    <a href='https://kwork.ru/categories/logo/logotipy?sonline=1' className='popup-filter__radio-link'>
-                      Заходил до 1 дн. назад
-                      <svg xmlns='http://www.w3.org/2000/svg' className='popup-filter__radio-cancel'>
-                        <path d='M7.562.438a.525.525 0 00-.743 0L4 3.258 1.18.438a.525.525 0 10-.742.743L3.258 4 .438 6.82a.525.525 0 10.743.742L4 4.742l2.82 2.82a.525.525 0 10.742-.743L4.742 4l2.82-2.82a.525.525 0 000-.742z'></path>
-                      </svg>
-                    </a>
-                  </label>
-                </div>
-                <div className='popup-filter__prop'>
-                  <input type='radio' name='sonline' className='styled-radio popup-filter__radio' value='3' />
-                  <label className='popup-filter__radio-label'>
-                    <a href='https://kwork.ru/categories/logo/logotipy?sonline=3' className='popup-filter__radio-link'>
-                      Заходил до 3 дн. назад
-                      <svg xmlns='http://www.w3.org/2000/svg' className='popup-filter__radio-cancel'>
-                        <path d='M7.562.438a.525.525 0 00-.743 0L4 3.258 1.18.438a.525.525 0 10-.742.743L3.258 4 .438 6.82a.525.525 0 10.743.742L4 4.742l2.82 2.82a.525.525 0 10.742-.743L4.742 4l2.82-2.82a.525.525 0 000-.742z'></path>
-                      </svg>
-                    </a>
-                  </label>
-                </div>
-                <div className='popup-filter__prop'>
-                  <input type='radio' name='sonline' className='styled-radio popup-filter__radio' value='7' />
-                  <label className='popup-filter__radio-label'>
-                    <a href='https://kwork.ru/categories/logo/logotipy?sonline=7' className='popup-filter__radio-link'>
-                      Заходил до 1 нед. назад
-                      <svg xmlns='http://www.w3.org/2000/svg' className='popup-filter__radio-cancel'>
-                        <path d='M7.562.438a.525.525 0 00-.743 0L4 3.258 1.18.438a.525.525 0 10-.742.743L3.258 4 .438 6.82a.525.525 0 10.743.742L4 4.742l2.82 2.82a.525.525 0 10.742-.743L4.742 4l2.82-2.82a.525.525 0 000-.742z'></path>
-                      </svg>
-                    </a>
-                  </label>
-                </div>
-                <div className='popup-filter__prop'>
-                  <input type='radio' name='sonline' className='styled-radio popup-filter__radio' value='14' />
-                  <label className='popup-filter__radio-label'>
-                    <a href='https://kwork.ru/categories/logo/logotipy?sonline=14' className='popup-filter__radio-link'>
-                      Заходил до 2 нед. назад
-                      <svg xmlns='http://www.w3.org/2000/svg' className='popup-filter__radio-cancel'>
-                        <path d='M7.562.438a.525.525 0 00-.743 0L4 3.258 1.18.438a.525.525 0 10-.742.743L3.258 4 .438 6.82a.525.525 0 10.743.742L4 4.742l2.82 2.82a.525.525 0 10.742-.743L4.742 4l2.82-2.82a.525.525 0 000-.742z'></path>
-                      </svg>
-                    </a>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className='popup-filter__group attibute-review-filter'>
-            <h3 className='popup-filter__group-title m-visible'>
-              <span className='popup-filter__group-title-text'>Положительных отзывов</span>
-              <i
-                data-tooltip-text='Количество положительных отзывов у продавца'
-                data-tooltip-class='popup-filter__tooltip'
-                className='icon-question-outlined tooltipster cur popup-filter__group-title-icon'></i>
-            </h3>
-            <div className='card__content-column'>
-              <div className='card__content-header'>
-                <strong>Положительных отзывов</strong>{' '}
-                <span className='wrap-tooltip_circle wrap-tooltip_circle--scale-16 ml0'>
-                  <span
-                    data-tooltip-side='right'
-                    data-tooltip-text='Количество положительных отзывов у продавца'
-                    data-tooltip-theme='dark'
-                    className='tooltipster tooltip_circle tooltip_circle--light tooltip_circle--hover tooltip_circle--scale-16'>
-                    ?
-                  </span>
-                </span>
-              </div>
-              <div className='card__content-body popup-filter__props popup-filter__props-list'>
-                <div className='popup-filter__prop'>
-                  <input type='radio' name='sminreview' className='styled-radio popup-filter__radio' value='1' />
-                  <label className='popup-filter__radio-label'>
-                    <a
-                      href='https://kwork.ru/categories/logo/logotipy?sminreview=1'
-                      className='popup-filter__radio-link'>
-                      От 1
-                      <svg xmlns='http://www.w3.org/2000/svg' className='popup-filter__radio-cancel'>
-                        <path d='M7.562.438a.525.525 0 00-.743 0L4 3.258 1.18.438a.525.525 0 10-.742.743L3.258 4 .438 6.82a.525.525 0 10.743.742L4 4.742l2.82 2.82a.525.525 0 10.742-.743L4.742 4l2.82-2.82a.525.525 0 000-.742z'></path>
-                      </svg>
-                    </a>
-                  </label>
-                </div>
-                <div className='popup-filter__prop'>
-                  <input type='radio' name='sminreview' className='styled-radio popup-filter__radio' value='5' />
-                  <label className='popup-filter__radio-label'>
-                    <a
-                      href='https://kwork.ru/categories/logo/logotipy?sminreview=5'
-                      className='popup-filter__radio-link'>
-                      От 5
-                      <svg xmlns='http://www.w3.org/2000/svg' className='popup-filter__radio-cancel'>
-                        <path d='M7.562.438a.525.525 0 00-.743 0L4 3.258 1.18.438a.525.525 0 10-.742.743L3.258 4 .438 6.82a.525.525 0 10.743.742L4 4.742l2.82 2.82a.525.525 0 10.742-.743L4.742 4l2.82-2.82a.525.525 0 000-.742z'></path>
-                      </svg>
-                    </a>
-                  </label>
-                </div>
-                <div className='popup-filter__prop'>
-                  <input type='radio' name='sminreview' className='styled-radio popup-filter__radio' value='20' />
-                  <label className='popup-filter__radio-label'>
-                    <a
-                      href='https://kwork.ru/categories/logo/logotipy?sminreview=20'
-                      className='popup-filter__radio-link'>
-                      От 20
-                      <svg xmlns='http://www.w3.org/2000/svg' className='popup-filter__radio-cancel'>
-                        <path d='M7.562.438a.525.525 0 00-.743 0L4 3.258 1.18.438a.525.525 0 10-.742.743L3.258 4 .438 6.82a.525.525 0 10.743.742L4 4.742l2.82 2.82a.525.525 0 10.742-.743L4.742 4l2.82-2.82a.525.525 0 000-.742z'></path>
-                      </svg>
-                    </a>
-                  </label>
-                </div>
-                <div className='popup-filter__prop'>
-                  <input type='radio' name='sminreview' className='styled-radio popup-filter__radio' value='100' />
-                  <label className='popup-filter__radio-label'>
-                    <a
-                      href='https://kwork.ru/categories/logo/logotipy?sminreview=100'
-                      className='popup-filter__radio-link'>
-                      От 100
-                      <svg xmlns='http://www.w3.org/2000/svg' className='popup-filter__radio-cancel'>
-                        <path d='M7.562.438a.525.525 0 00-.743 0L4 3.258 1.18.438a.525.525 0 10-.742.743L3.258 4 .438 6.82a.525.525 0 10.743.742L4 4.742l2.82 2.82a.525.525 0 10.742-.743L4.742 4l2.82-2.82a.525.525 0 000-.742z'></path>
-                      </svg>
-                    </a>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
+          <article className={styles.filtersWrapper}>
+            <h3 className={styles.filterTitle}>Уровень продавца</h3>
+            {levelSalesman.map((item, index) => (
+              <a className={styles.filterLink} href={`${item.link}`} key={index}>
+                {item.level}.
+              </a>
+            ))}
+          </article>
+          <article className={styles.filtersWrapper}>
+            <h3 className={styles.filterTitle}>Активность продавцов</h3>
+            {sellerActivity.map((item, index) => (
+              <a className={styles.filterLink} href={`${item.link}`} key={index}>
+                {item.level}.
+              </a>
+            ))}
+          </article>
+          <article className={styles.filtersWrapper}>
+            <h3 className={styles.filterTitle}>Положительных отзывов</h3>
+            {positiveReviews.map((item, index) => (
+              <a className={styles.filterLink} href={`${item.link}`} key={index}>
+                {item.level}.
+              </a>
+            ))}
+          </article>
           <div className='popup-filter__group'>
             <h3 className='popup-filter__group-title m-visible'>
               <span className='popup-filter__group-title-text'>Срок выполнения</span>{' '}
