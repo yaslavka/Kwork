@@ -10,6 +10,15 @@ import styles from './categoryPublick.module.scss';
 import rightArrow from '../../../assets/images/arrow-right.svg';
 import cross from '../../../assets/images/cross-white.svg';
 
+const filterInputItem = ['В нескольких цветах', 'Визуализация', 'Фавикон', 'Высокое разрешение', 'Исходники'];
+const linkPrice = [
+  { link: 'https://kwork.ru/categories/logo/logotipy?price=_500', price: '500' },
+  { link: 'https://kwork.ru/categories/logo/logotipy?price=1000_3500', price: '1 000 руб. - 3 500 руб.' },
+  { link: 'https://kwork.ru/categories/logo/logotipy?price=4000_27000', price: '4000 - 27000' },
+  { link: 'https://kwork.ru/categories/logo/logotipy?price=30000_', price: 'от 30 000 и выше' },
+];
+
+
 function CategoryPublic({ children }) {
   const location = useLocation();
   const { t } = useTranslation('common');
@@ -476,73 +485,12 @@ function CategoryPublic({ children }) {
             <button className={styles.filterBtn} type='button'>
               Сбросить
             </button>
-            <ul>
-              <li>
-                <label className={styles.checkboxLabel}>
-                  <input type='checkbox' className={styles.checkbox} hidden />
-                  <span className={styles.checkboxTitle}>I agree to Terms of Service and Privacy Policy</span>
-                </label>
-              </li>
-              <label style={{color: 'red'}}>
-                <input type='checkbox' />
-                <span>ererferf</span>
+            {filterInputItem.map((item, index) => (
+              <label className={styles.checkboxLabel} key={index}>
+                <input type='checkbox' className={styles.checkbox} hidden />
+                <span className={styles.checkboxTitle}>{item}</span>
               </label>
-              <li>
-                <input
-                  id='package_filter_186'
-                  type='checkbox'
-                  className='custom-select__list-checkbox popup-filter__checkbox-input m-hidden'
-                  value='186'
-                />
-                <label htmlFor='package_filter_186' className='custom-select__list-item popup-filter__checkbox'>
-                  В нескольких цветах
-                </label>
-              </li>
-              <li className='popup-filter__custom-select-item'>
-                <input
-                  id='package_filter_187'
-                  type='checkbox'
-                  className='custom-select__list-checkbox popup-filter__checkbox-input m-hidden'
-                  value='187'
-                />{' '}
-                <label htmlFor='package_filter_187' className='custom-select__list-item popup-filter__checkbox'>
-                  Визуализация
-                </label>
-              </li>
-              <li className='popup-filter__custom-select-item'>
-                <input
-                  id='package_filter_188'
-                  type='checkbox'
-                  className='custom-select__list-checkbox popup-filter__checkbox-input m-hidden'
-                  value='188'
-                />{' '}
-                <label htmlFor='package_filter_188' className='custom-select__list-item popup-filter__checkbox'>
-                  Фавикон
-                </label>
-              </li>
-              <li className='popup-filter__custom-select-item'>
-                <input
-                  id='package_filter_189'
-                  type='checkbox'
-                  className='custom-select__list-checkbox popup-filter__checkbox-input m-hidden'
-                  value='189'
-                />{' '}
-                <label htmlFor='package_filter_189' className='custom-select__list-item popup-filter__checkbox'>
-                  Высокое разрешение
-                </label>
-              </li>
-              <li className='popup-filter__custom-select-item'>
-                <input
-                  id='package_filter_190'
-                  type='checkbox'
-                  className='custom-select__list-checkbox popup-filter__checkbox-input m-hidden'
-                  value='190'
-                />{' '}
-                <label htmlFor='package_filter_190' className='custom-select__list-item popup-filter__checkbox'>
-                  Исходники
-                </label>
-              </li>
-            </ul>
+            ))}
           </article>
           {/*Колличество логотипов*/}
           {/*<div className='custom-select-wrapper_theme_left-filter popup-filter__group'>
@@ -570,136 +518,39 @@ function CategoryPublic({ children }) {
                 </div>
               </div>
             </div>*/}
-          <div className='price-filters__block popup-filter__group popup-filter__group_margin_mobile volume-price-filters__block js-test-volume-filter'>
-            <div className='popup-filter__group popup-filter__combined-filter'>
-              <h3 className='popup-filter__group-title m-visible'>
-                <span className='popup-filter__group-title-text'>
-                  Цена
-                  <span className='popup-filter__currency m-visible'>
-                    , <span className='rouble'>₽</span>
-                  </span>
-                </span>
-              </h3>
-              <div className='card__content-column'>
-                <strong>Цена</strong>
-                <div className='card__content-body'>
-                  <div className='m-mb65 js-set-price-block popup-filter__set-price-block popup-filter__props-list popup-filter__props-list--price'>
-                    <div className='clear popup-filter__prop'>
-                      <input
-                        type='radio'
-                        name='price'
-                        className='js-kwork-filter-input js-kwork-price styled-radio js-kwork-filter-input-price popup-filter__radio'
-                        value='_500'
-                      />{' '}
-                      <label className='popup-filter__radio-label'>
-                        <a
-                          href='https://kwork.ru/categories/logo/logotipy?price=_500'
-                          className='popup-filter__radio-link'>
-                          <span className='popup-filter__prop-title'>500 руб.</span>{' '}
-                          <span className='popup-filter__prop-title--mob'>
-                            500
-                            <svg xmlns='http://www.w3.org/2000/svg' className='popup-filter__radio-cancel'>
-                              <path d='M7.562.438a.525.525 0 00-.743 0L4 3.258 1.18.438a.525.525 0 10-.742.743L3.258 4 .438 6.82a.525.525 0 10.743.742L4 4.742l2.82 2.82a.525.525 0 10.742-.743L4.742 4l2.82-2.82a.525.525 0 000-.742z'></path>
-                            </svg>
-                          </span>
-                        </a>
-                      </label>
-                    </div>
-                    <div className='clear popup-filter__prop'>
-                      <input
-                        type='radio'
-                        name='price'
-                        className='js-kwork-filter-input js-kwork-price styled-radio js-kwork-filter-input-price popup-filter__radio'
-                        value='1000_3500'
-                      />{' '}
-                      <label className='popup-filter__radio-label'>
-                        <a
-                          href='https://kwork.ru/categories/logo/logotipy?price=1000_3500'
-                          className='popup-filter__radio-link'>
-                          <span className='popup-filter__prop-title'>1 000 руб. - 3 500 руб.</span>
-                          <span className='popup-filter__prop-title--mob'>
-                            1000 - 3500
-                            <svg xmlns='http://www.w3.org/2000/svg' className='popup-filter__radio-cancel'>
-                              <path d='M7.562.438a.525.525 0 00-.743 0L4 3.258 1.18.438a.525.525 0 10-.742.743L3.258 4 .438 6.82a.525.525 0 10.743.742L4 4.742l2.82 2.82a.525.525 0 10.742-.743L4.742 4l2.82-2.82a.525.525 0 000-.742z'></path>
-                            </svg>
-                          </span>
-                        </a>
-                      </label>
-                    </div>
-                    <div className='clear popup-filter__prop'>
-                      <input
-                        type='radio'
-                        name='price'
-                        className='js-kwork-filter-input js-kwork-price styled-radio js-kwork-filter-input-price popup-filter__radio'
-                        value='4000_27000'
-                      />{' '}
-                      <label className='popup-filter__radio-label'>
-                        <a
-                          href='https://kwork.ru/categories/logo/logotipy?price=4000_27000'
-                          className='popup-filter__radio-link'>
-                          <span className='popup-filter__prop-title'>4 000 руб. - 27 000 руб.</span>
-                          <span className='popup-filter__prop-title--mob'>
-                            4000 - 27000
-                            <svg xmlns='http://www.w3.org/2000/svg' className='popup-filter__radio-cancel'>
-                              <path d='M7.562.438a.525.525 0 00-.743 0L4 3.258 1.18.438a.525.525 0 10-.742.743L3.258 4 .438 6.82a.525.525 0 10.743.742L4 4.742l2.82 2.82a.525.525 0 10.742-.743L4.742 4l2.82-2.82a.525.525 0 000-.742z'></path>
-                            </svg>
-                          </span>
-                        </a>
-                      </label>
-                    </div>
-                    <div className='clear popup-filter__prop'>
-                      <input
-                        type='radio'
-                        name='price'
-                        className='js-kwork-filter-input js-kwork-price styled-radio js-kwork-filter-input-price popup-filter__radio'
-                        value='30000_'
-                      />{' '}
-                      <label className='popup-filter__radio-label'>
-                        <a
-                          href='https://kwork.ru/categories/logo/logotipy?price=30000_'
-                          className='popup-filter__radio-link'>
-                          <span className='popup-filter__prop-title'>30 000 руб. и выше</span>
-                          <span className='popup-filter__prop-title--mob'>
-                            от 30000
-                            <svg xmlns='http://www.w3.org/2000/svg' className='popup-filter__radio-cancel'>
-                              <path d='M7.562.438a.525.525 0 00-.743 0L4 3.258 1.18.438a.525.525 0 10-.742.743L3.258 4 .438 6.82a.525.525 0 10.743.742L4 4.742l2.82 2.82a.525.525 0 10.742-.743L4.742 4l2.82-2.82a.525.525 0 000-.742z'></path>
-                            </svg>
-                          </span>
-                        </a>
-                      </label>
-                    </div>
-                  </div>
-                  <div className='price-filter-inputs-block'>
-                    <div className='price-filter-input__box w100pi_mobile popup-filter__field'>
-                      <span className='popup-filter__field-text'>от</span>{' '}
-                      <input
-                        type='number'
-                        min='0'
-                        step='1'
-                        data-volume-name='volume_price_from'
-                        data-price='from'
-                        placeholder='От руб.'
-                        autoComplete='off'
-                        className='js-combined-filter-input popup-filter__field-input text-transform-normal'
-                      />
-                    </div>
-                    <div className='price-filter-input__box ml10 w100pi_mobile popup-filter__field'>
-                      <span className='popup-filter__field-text'>до</span>{' '}
-                      <input
-                        type='number'
-                        min='0'
-                        data-volume-name='volume_price_to'
-                        data-price='to'
-                        placeholder='До руб.'
-                        autoComplete='off'
-                        className='js-combined-filter-input popup-filter__field-input text-transform-normal'
-                      />
-                    </div>
-                  </div>
-                </div>
+          <article className={styles.filtersWrapper}>
+            <h3 className={styles.filterTitle}>Цена</h3>
+            {linkPrice.map((item, index) => (
+              <a className={styles.filterLink} href={`${item.link}`} key={index}>{item.price}.</a>
+            ))}
+            <div className='price-filter-inputs-block'>
+              <div className='price-filter-input__box w100pi_mobile popup-filter__field'>
+                <span className='popup-filter__field-text'>от</span>{' '}
+                <input
+                  type='number'
+                  min='0'
+                  step='1'
+                  data-volume-name='volume_price_from'
+                  data-price='from'
+                  placeholder='От руб.'
+                  autoComplete='off'
+                  className='js-combined-filter-input popup-filter__field-input text-transform-normal'
+                />
+              </div>
+              <div className='price-filter-input__box ml10 w100pi_mobile popup-filter__field'>
+                <span className='popup-filter__field-text'>до</span>{' '}
+                <input
+                  type='number'
+                  min='0'
+                  data-volume-name='volume_price_to'
+                  data-price='to'
+                  placeholder='До руб.'
+                  autoComplete='off'
+                  className='js-combined-filter-input popup-filter__field-input text-transform-normal'
+                />
               </div>
             </div>
-          </div>
+          </article>
 
           <div className='popup-filter__group'>
             <h3 className='popup-filter__group-title m-visible'>
