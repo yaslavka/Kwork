@@ -95,10 +95,86 @@
 .filters {
   display: grid;
   row-gap: 8px;
+  max-width: 230px;
+  background-color: white;
+  padding: 12px 15px 10px;
+  border: 1px solid #e8e8e8;
 }
 .filtersWrapper {
-
+  position: relative;
+  &:before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #e8e8e8;
+  }
 }
+.filterTitle {
+  color: #111;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 18px;
+}
+.filterBtn {
+  @extend %button;
+  background-color: #457edb;
+  color: #fff;
+}
+
+//-----------------
+.checkboxLabel {
+  cursor: pointer;
+}
+.checkbox {
+  &:checked ~ .checkboxTitle {
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+.checkboxTitle {
+  position: relative;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0 10px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  color: black;
+
+  &:before {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    display: block;
+    border-radius: 6px;
+    border: 2px solid $btnBg;
+    background-color: $white;
+    content: '';
+  }
+  //check.svg
+  &::after {
+    position: absolute;
+    top: 3px;
+    left: 6px;
+    width: 3px;
+    height: 10px;
+    border: solid $dots;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    content: '';
+    opacity: 0;
+    transition: 0.3s opacity;
+  }
+}
+//--------------
 .title {
   color: #ffa800;
   font-size: 15px;

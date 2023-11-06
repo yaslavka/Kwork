@@ -15,3 +15,11 @@ $white: #fff;
   padding: 0 32px;
   margin: 0 auto;
 }
+%button {
+  background: #fff;
+  border: 1px solid #dfe1e6;
+  border-radius: 4px;
+  color: #111;
+  padding: 2px 8px;
+  transition: 0.1s ease-in;
+}

@@ -143,7 +143,7 @@ function CategoryPublic({ children }) {
       </article>
       <section className={styles.designLogoWrapper}>
         <aside className={styles.filters}>
-          <div className={styles.filtersWrapper}>
+          <article className={styles.filtersWrapper}>
             <h4 className={styles.title}>Рубрики</h4>
             <div>
               <a href='https://kwork.ru/categories/design' className={styles.filterLink}>
@@ -215,9 +215,7 @@ function CategoryPublic({ children }) {
                         <ul className='sub_cat_list popup-filter__rubrics-list'>
                           <li className='subcats popup-filter__rubrics-item js-popup-filter-rubrics-item'>
                             <ul className='sub_cat_list popup-filter__rubrics-list'>
-                              <li className='subcats popup-filter__rubrics-item js-popup-filter-rubrics-item hide popup-filter__rubrics-item--hide'>
-
-                              </li>
+                              <li className='subcats popup-filter__rubrics-item js-popup-filter-rubrics-item hide popup-filter__rubrics-item--hide'></li>
                               <li className='subcats popup-filter__rubrics-item js-popup-filter-rubrics-item hide popup-filter__rubrics-item--hide'>
                                 <a
                                   data-id='401942'
@@ -304,9 +302,7 @@ function CategoryPublic({ children }) {
                               </li>
                             </ul>
                           </li>
-                          <li className='subcats popup-filter__rubrics-item js-popup-filter-rubrics-item'>
-
-                          </li>
+                          <li className='subcats popup-filter__rubrics-item js-popup-filter-rubrics-item'></li>
                         </ul>
                       </li>
                       <li className='subcats popup-filter__rubrics-item js-popup-filter-rubrics-item hide'>
@@ -474,77 +470,82 @@ function CategoryPublic({ children }) {
                 </ul>
               </div>
             </div>
-            <hr />
-          </div>
-          <div>
-            <div className='custom-select-wrapper_theme_left-filter popup-filter__group'>
-              <div className='custom-select custom-select_theme_multiple popup-filter__multiple'>
-                <div className='custom-select__title popup-filter__group-title'>
-                  <span className='popup-filter__group-title-text'>Услуга включает</span>
-                </div>
-                <span className='custom-select__filter-clear filter-clear link-color custom-checkbox__filter-clear hidden'>
-                  Сбросить
-                </span>
-                <ul className='custom-select__list card__content-body popup-filter__props popup-filter__props-list'>
-                  <li className='popup-filter__custom-select-item'>
-                    <input
-                      id='package_filter_186'
-                      type='checkbox'
-                      className='custom-select__list-checkbox popup-filter__checkbox-input m-hidden'
-                      value='186'
-                    />{' '}
-                    <label htmlFor='package_filter_186' className='custom-select__list-item popup-filter__checkbox'>
-                      В нескольких цветах
-                    </label>
-                  </li>
-                  <li className='popup-filter__custom-select-item'>
-                    <input
-                      id='package_filter_187'
-                      type='checkbox'
-                      className='custom-select__list-checkbox popup-filter__checkbox-input m-hidden'
-                      value='187'
-                    />{' '}
-                    <label htmlFor='package_filter_187' className='custom-select__list-item popup-filter__checkbox'>
-                      Визуализация
-                    </label>
-                  </li>
-                  <li className='popup-filter__custom-select-item'>
-                    <input
-                      id='package_filter_188'
-                      type='checkbox'
-                      className='custom-select__list-checkbox popup-filter__checkbox-input m-hidden'
-                      value='188'
-                    />{' '}
-                    <label htmlFor='package_filter_188' className='custom-select__list-item popup-filter__checkbox'>
-                      Фавикон
-                    </label>
-                  </li>
-                  <li className='popup-filter__custom-select-item'>
-                    <input
-                      id='package_filter_189'
-                      type='checkbox'
-                      className='custom-select__list-checkbox popup-filter__checkbox-input m-hidden'
-                      value='189'
-                    />{' '}
-                    <label htmlFor='package_filter_189' className='custom-select__list-item popup-filter__checkbox'>
-                      Высокое разрешение
-                    </label>
-                  </li>
-                  <li className='popup-filter__custom-select-item'>
-                    <input
-                      id='package_filter_190'
-                      type='checkbox'
-                      className='custom-select__list-checkbox popup-filter__checkbox-input m-hidden'
-                      value='190'
-                    />{' '}
-                    <label htmlFor='package_filter_190' className='custom-select__list-item popup-filter__checkbox'>
-                      Исходники
-                    </label>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className='custom-select-wrapper_theme_left-filter popup-filter__group'>
+          </article>
+          <article className={styles.filtersWrapper}>
+            <h3 className={styles.filterTitle}>Услуга включает</h3>
+            <button className={styles.filterBtn} type='button'>
+              Сбросить
+            </button>
+            <ul>
+              <li>
+                <label className={styles.checkboxLabel}>
+                  <input type='checkbox' className={styles.checkbox} hidden />
+                  <span className={styles.checkboxTitle}>I agree to Terms of Service and Privacy Policy</span>
+                </label>
+              </li>
+              <label style={{color: 'red'}}>
+                <input type='checkbox' />
+                <span>ererferf</span>
+              </label>
+              <li>
+                <input
+                  id='package_filter_186'
+                  type='checkbox'
+                  className='custom-select__list-checkbox popup-filter__checkbox-input m-hidden'
+                  value='186'
+                />
+                <label htmlFor='package_filter_186' className='custom-select__list-item popup-filter__checkbox'>
+                  В нескольких цветах
+                </label>
+              </li>
+              <li className='popup-filter__custom-select-item'>
+                <input
+                  id='package_filter_187'
+                  type='checkbox'
+                  className='custom-select__list-checkbox popup-filter__checkbox-input m-hidden'
+                  value='187'
+                />{' '}
+                <label htmlFor='package_filter_187' className='custom-select__list-item popup-filter__checkbox'>
+                  Визуализация
+                </label>
+              </li>
+              <li className='popup-filter__custom-select-item'>
+                <input
+                  id='package_filter_188'
+                  type='checkbox'
+                  className='custom-select__list-checkbox popup-filter__checkbox-input m-hidden'
+                  value='188'
+                />{' '}
+                <label htmlFor='package_filter_188' className='custom-select__list-item popup-filter__checkbox'>
+                  Фавикон
+                </label>
+              </li>
+              <li className='popup-filter__custom-select-item'>
+                <input
+                  id='package_filter_189'
+                  type='checkbox'
+                  className='custom-select__list-checkbox popup-filter__checkbox-input m-hidden'
+                  value='189'
+                />{' '}
+                <label htmlFor='package_filter_189' className='custom-select__list-item popup-filter__checkbox'>
+                  Высокое разрешение
+                </label>
+              </li>
+              <li className='popup-filter__custom-select-item'>
+                <input
+                  id='package_filter_190'
+                  type='checkbox'
+                  className='custom-select__list-checkbox popup-filter__checkbox-input m-hidden'
+                  value='190'
+                />{' '}
+                <label htmlFor='package_filter_190' className='custom-select__list-item popup-filter__checkbox'>
+                  Исходники
+                </label>
+              </li>
+            </ul>
+          </article>
+          {/*Колличество логотипов*/}
+          {/*<div className='custom-select-wrapper_theme_left-filter popup-filter__group'>
               <div className='custom-select custom-volume-wrapper'>
                 <div className='custom-volume clearfix'>
                   <div className='card__content-column'>
@@ -568,8 +569,7 @@ function CategoryPublic({ children }) {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+            </div>*/}
           <div className='price-filters__block popup-filter__group popup-filter__group_margin_mobile volume-price-filters__block js-test-volume-filter'>
             <div className='popup-filter__group popup-filter__combined-filter'>
               <h3 className='popup-filter__group-title m-visible'>
@@ -581,9 +581,7 @@ function CategoryPublic({ children }) {
                 </span>
               </h3>
               <div className='card__content-column'>
-                <div className='card__content-header'>
-                  <strong>Цена</strong>
-                </div>
+                <strong>Цена</strong>
                 <div className='card__content-body'>
                   <div className='m-mb65 js-set-price-block popup-filter__set-price-block popup-filter__props-list popup-filter__props-list--price'>
                     <div className='clear popup-filter__prop'>
