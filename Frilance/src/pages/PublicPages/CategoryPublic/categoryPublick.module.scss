@@ -194,3 +194,18 @@
     color: $hover;
   }
 }
+
+.text {
+  display: grid;
+  overflow: hidden;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 800ms ease;
+  max-width: 200px;
+  min-height: 0;
+}
+.textOpen {
+  grid-template-rows: 1fr;
+}
+.textBox {
+  min-height: 0;
+}

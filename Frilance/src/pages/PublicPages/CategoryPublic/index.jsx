@@ -24,6 +24,8 @@ function CategoryPublic({ children }) {
   const { t } = useTranslation('common');
   const [categoryPublicises, setCategoryPublicises] = useState(null);
 
+  const [open, setOpen] = useState(false);
+
   /*useEffect(()=>{
         api.listCategoryPages({pathname:location.pathname})
             .then((response)=>{
@@ -586,14 +588,20 @@ function CategoryPublic({ children }) {
             ))}
           </article>
           <article className={styles.filtersWrapper}>
-            <button className={styles.filterBtn} type='button'>
+            <button className={styles.filterBtn} onClick={() => setOpen(!open)} type='button'>
               Теги
             </button>
-            {tags.map((item, index) => (
-              <a className={styles.filterLink} href={`${item.link}`} key={index}>
-                {item.level}.
-              </a>
-            ))}
+            <aside className={`${styles.text} ${open && styles.textOpen}`}>
+              <ul className={styles.textBox}>
+                {tags.map((item, index) => (
+                  <li>
+                    <a className={styles.filterLink} href={`${item.link}`} key={index}>
+                      {item.level}.
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </aside>
           </article>
           <button type='button' className='kworks-filter-button kworks-filter-button--pretty'>
             <span>Фильтры</span>{' '}
