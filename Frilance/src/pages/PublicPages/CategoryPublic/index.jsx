@@ -19,24 +19,105 @@ const linkPrice = [
 ];
 
 const levelSalesman = [
-  { link:'https://kwork.ru/categories/logo/logotipy?sellerlvl=1', level: 'Восходящая звезда и выше' },
-  { link:'https://kwork.ru/categories/logo/logotipy?sellerlvl=2', level: 'Высший рейтинг и выше' },
-  { link:'https://kwork.ru/categories/logo/logotipy?sellerlvl=3', level: ' Высший рейтинг плюс' },
+  { link: 'https://kwork.ru/categories/logo/logotipy?sellerlvl=1', level: 'Восходящая звезда и выше' },
+  { link: 'https://kwork.ru/categories/logo/logotipy?sellerlvl=2', level: 'Высший рейтинг и выше' },
+  { link: 'https://kwork.ru/categories/logo/logotipy?sellerlvl=3', level: ' Высший рейтинг плюс' },
 ];
 
 const sellerActivity = [
-  { link:'https://kwork.ru/categories/logo/logotipy?sonline=online', level: 'Онлайн' },
-  { link:'https://kwork.ru/categories/logo/logotipy?sonline=1', level: 'Заходил до 1 дн. назад' },
-  { link:'https://kwork.ru/categories/logo/logotipy?sonline=3', level: 'Заходил до 3 дн. назад' },
-  { link:'https://kwork.ru/categories/logo/logotipy?sonline=7', level: 'Заходил до 1 нед. назад' },
-  { link:'https://kwork.ru/categories/logo/logotipy?sonline=14', level: 'Заходил до 2 нед. назад' },
+  { link: 'https://kwork.ru/categories/logo/logotipy?sonline=online', level: 'Онлайн' },
+  { link: 'https://kwork.ru/categories/logo/logotipy?sonline=1', level: 'Заходил до 1 дн. назад' },
+  { link: 'https://kwork.ru/categories/logo/logotipy?sonline=3', level: 'Заходил до 3 дн. назад' },
+  { link: 'https://kwork.ru/categories/logo/logotipy?sonline=7', level: 'Заходил до 1 нед. назад' },
+  { link: 'https://kwork.ru/categories/logo/logotipy?sonline=14', level: 'Заходил до 2 нед. назад' },
 ];
 
 const positiveReviews = [
-  { link:'https://kwork.ru/categories/logo/logotipy?sminreview=1', level: 'От 1' },
-  { link:'https://kwork.ru/categories/logo/logotipy?sminreview=5', level: 'От 5' },
-  { link:'https://kwork.ru/categories/logo/logotipy?sminreview=20', level: 'От 20' },
-  { link:'https://kwork.ru/categories/logo/logotipy?sminreview=100', level: 'От 100' },
+  { link: 'https://kwork.ru/categories/logo/logotipy?sminreview=1', level: 'От 1' },
+  { link: 'https://kwork.ru/categories/logo/logotipy?sminreview=5', level: 'От 5' },
+  { link: 'https://kwork.ru/categories/logo/logotipy?sminreview=20', level: 'От 20' },
+  { link: 'https://kwork.ru/categories/logo/logotipy?sminreview=100', level: 'От 100' },
+];
+
+const deadline = [
+  { link: 'https://kwork.ru/categories/logo/logotipy?sdeliverytime=1', level: 'За 24 часа' },
+  { link: 'https://kwork.ru/categories/logo/logotipy?sdeliverytime=2', level: 'До 2 дней' },
+  { link: 'https://kwork.ru/categories/logo/logotipy?sdeliverytime=3', level: 'До 3 дней' },
+  { link: 'https://kwork.ru/categories/logo/logotipy?sdeliverytime=5', level: 'До 5 дней' },
+  { link: 'https://kwork.ru/categories/logo/logotipy?sdeliverytime=10', level: 'До 10 дней' },
+];
+
+const tags = [
+  { link: 'https://kwork.ru/land/logotip-dlya-kompanii', level: 'Логотип для компании' },
+  { link: 'https://kwork.ru/land/logotip-dlya-sayta', level: 'Логотип для сайта' },
+  { link: 'https://kwork.ru/land/logo-dlya-sayta', level: 'Лого для компании' },
+  { link: 'https://kwork.ru/land/narisovat-logotip', level: 'Нарисовать логотип' },
+  { link: 'https://kwork.ru/land/logo-dlya-biznesa', level: 'Лого для бизнеса' },
+  { link: 'https://kwork.ru/land/firmenniy-znak', level: 'Фирменный знак' },
+  { link: 'https://kwork.ru/land/kachestvenniy-logotip', level: 'Качественный логотип' },
+  { link: 'https://kwork.ru/land/razrabotka-emblemy', level: 'Разработка эмблемы' },
+  { link: 'https://kwork.ru/land/sozdat-logotip', level: 'Создать логотип' },
+  { link: 'https://kwork.ru/land/razrabotka-logotipa', level: 'Разработка логотипа' },
+  { link: 'https://kwork.ru/land/unikalniy-logotip', level: 'Уникальный логотип' },
+  { link: 'https://kwork.ru/land/sozdat-dizayn-logotipa', level: 'Создать дизайн логотипа' },
+  { link: 'https://kwork.ru/land/razrabotka-dizayna-logotipa', level: 'Разработка дизайна логотипа' },
+  { link: 'https://kwork.ru/land/individualniy-logotip', level: 'Индивидуальный логотип' },
+  { link: 'https://kwork.ru/land/kreativniy-logotip', level: 'Креативный логотип' },
+  { link: 'https://kwork.ru/land/professionalniy-logotip', level: 'Профессиональный логотип' },
+  { link: 'https://kwork.ru/land/vektorniy-logotip', level: 'Векторный логотип' },
+  { link: 'https://kwork.ru/land/stilniy-logotip', level: 'Стильный логотип' },
+  { link: 'https://kwork.ru/land/vektorniy-logo', level: 'Векторный лого' },
+  { link: 'https://kwork.ru/land/sdelat-logotip', level: 'Сделать логотип' },
+  { link: 'https://kwork.ru/land/iskhodnik-logotipa', level: 'Исходник логотипа' },
+  { link: 'https://kwork.ru/land/dizayn-logo', level: 'Дизайн лого' },
+  { link: 'https://kwork.ru/land/narisovat-dizayn-logotipa', level: 'Нарисовать дизайн логотипа' },
+  { link: 'https://kwork.ru/land/originalniy-logotip', level: 'Оригинальный логотип' },
+  { link: 'https://kwork.ru/land/3d-logotip', level: '3D логотип' },
+  { link: 'https://kwork.ru/land/eskiz-logotipa', level: 'Эскиз логотипа' },
+  { link: 'https://kwork.ru/land/logotip-dlya-biznesa', level: 'Логотип для бизнеса' },
+  { link: 'https://kwork.ru/land/logotip-po-eskizu', level: 'Логотип по эскизу' },
+  { link: 'https://kwork.ru/land/logo', level: 'Лого' },
+  { link: 'https://kwork.ru/land/otrisovka-logotipa', level: 'Отрисовка логотипа' },
+  { link: 'https://kwork.ru/land/razrabotka-logo', level: 'Разработка лого' },
+  { link: 'https://kwork.ru/land/narisovat-logo', level: 'Нарисовать лого' },
+  { link: 'https://kwork.ru/land/sdelat-logo', level: 'Сделать лого' },
+  { link: 'https://kwork.ru/land/sozdat-logo', level: 'Создать лого' },
+  { link: 'https://kwork.ru/land/vizitnaya-kartochka', level: 'Визитная карточка' },
+  { link: 'https://kwork.ru/land/dizayn-vizitok', level: 'Дизайн визиток' },
+  { link: 'https://kwork.ru/land/maket-vizitki', level: 'Макет визитки' },
+  { link: 'https://kwork.ru/land/vizitka-dlya-biznesa', level: 'Визитка для бизнеса' },
+  { link: 'https://kwork.ru/land/vizitnie-karty', level: 'Визитные карты' },
+  { link: 'https://kwork.ru/land/dvustoronnyaya-vizitka', level: 'Двусторонняя визитка' },
+  { link: 'https://kwork.ru/land/dizayn-vizitnoy-kartochki', level: 'Дизайн визитной карточки' },
+  { link: 'https://kwork.ru/land/dizayn-maket-vizitki', level: 'Дизайн-макет визитки' },
+  { link: 'https://kwork.ru/land/izgotovit-vizitku', level: 'Изготовить визитку' },
+  { link: 'https://kwork.ru/land/originalniy-dizayn-vizitki', level: 'Оригинальный дизайн визитки' },
+  { link: 'https://kwork.ru/land/razrabotat-dizayn-vizitki', level: 'Разработать дизайн визитки' },
+  { link: 'https://kwork.ru/land/razrabotat-vizitnuyu-kartochku', level: 'Разработать визитную карточку' },
+  { link: 'https://kwork.ru/land/razrabotat-maket-vizitki', level: 'Разработать макет визитки' },
+  { link: 'https://kwork.ru/land/eksklyuzivnaya-vizitka', level: 'Эксклюзивная визитка' },
+  { link: 'https://kwork.ru/land/sdelat-vizitku', level: 'Сделать визитку' },
+  { link: 'https://kwork.ru/land/sdelat-dizayn-vizitki', level: 'Сделать дизайн визитки' },
+  { link: 'https://kwork.ru/land/sdelat-maket-vizitki', level: 'Сделать макет визитки' },
+  { link: 'https://kwork.ru/land/sozdat-vizitku', level: 'Создать визитку' },
+  { link: 'https://kwork.ru/land/sozdat-maket-vizitki', level: 'Создать макет визитки' },
+  { link: 'https://kwork.ru/land/unikalnaya-vizitka', level: 'Уникальная визитка' },
+  { link: 'https://kwork.ru/land/psd-vizitki', level: 'PSD визитки' },
+  { link: 'https://kwork.ru/land/narisovat-vizitku', level: 'Нарисовать визитку' },
+  { link: 'https://kwork.ru/land/razrabotat-vizitku', level: 'Разработать визитку' },
+  { link: 'https://kwork.ru/land/maket-poligrafii', level: 'Макет полиграфии' },
+  { link: 'https://kwork.ru/land/maket-pechati', level: 'Макет печати' },
+  { link: 'https://kwork.ru/land/logotip-akvarelyu', level: 'Логотип акварелью' },
+  { link: 'https://kwork.ru/land/razrabotat-dizayn-firmennogo-blanka', level: 'Разработать дизайн фирменного бланка' },
+  { link: 'https://kwork.ru/land/razrabotka-firmennogo-logotipa', level: 'Разработка фирменного логотипа' },
+  { link: 'https://kwork.ru/land/sozdanie-firmennogo-stilya', level: 'Создание фирменного стиля' },
+  { link: 'https://kwork.ru/land/razrabotka-brendbuka', level: 'Разработка брендбука' },
+  { link: 'https://kwork.ru/land/sozdanie-firmennogo-blanka', level: 'Создание фирменного бланка' },
+  { link: 'https://kwork.ru/land/sozdat-firmenniy-blank-s-logotipom', level: 'Создать фирменный бланк с логотипом' },
+  { link: 'https://kwork.ru/land/razrabotka-firmennogo-stilya', level: 'Разработка фирменного стиля' },
+  { link: 'https://kwork.ru/land/razrabotat-dizayn-blanka', level: 'Разработать дизайн бланка' },
+  { link: 'https://kwork.ru/land/razrabotka-brenda', level: 'Разработка бренда' },
+  { link: 'https://kwork.ru/land/razrabotka-firmennogo-blanka', level: 'Разработка фирменного бланка' },
 ];
 
 function CategoryPublic({ children }) {
@@ -597,565 +678,24 @@ function CategoryPublic({ children }) {
               </a>
             ))}
           </article>
-          <div className='popup-filter__group'>
-            <h3 className='popup-filter__group-title m-visible'>
-              <span className='popup-filter__group-title-text'>Срок выполнения</span>{' '}
-              <i
-                data-tooltip-text='Укажите желаемый срок выполнения кворка'
-                data-tooltip-class='popup-filter__tooltip'
-                className='icon-question-outlined tooltipster cur popup-filter__group-title-icon'></i>
-            </h3>
-            <div className='card__content-column'>
-              <div className='card__content-header'>
-                <strong>Срок выполнения</strong>{' '}
-                <span className='wrap-tooltip_circle wrap-tooltip_circle--scale-16 ml0'>
-                  <span
-                    data-tooltip-side='right'
-                    data-tooltip-text='Укажите желаемый срок выполнения кворка'
-                    data-tooltip-theme='dark'
-                    className='tooltipster tooltip_circle tooltip_circle--light tooltip_circle--hover tooltip_circle--scale-16'>
-                    ?
-                  </span>
-                </span>
-              </div>
-              <div className='card__content-body popup-filter__props fw400'>
-                <div className='popup-filter__props-list'>
-                  <div className='popup-filter__prop'>
-                    <input type='radio' name='sdeliverytime' className='styled-radio popup-filter__radio' value='1' />
-                    <label className='popup-filter__radio-label'>
-                      <a
-                        href='https://kwork.ru/categories/logo/logotipy?sdeliverytime=1'
-                        className='popup-filter__radio-link'>
-                        За 24 часа
-                        <svg xmlns='http://www.w3.org/2000/svg' className='popup-filter__radio-cancel'>
-                          <path d='M7.562.438a.525.525 0 00-.743 0L4 3.258 1.18.438a.525.525 0 10-.742.743L3.258 4 .438 6.82a.525.525 0 10.743.742L4 4.742l2.82 2.82a.525.525 0 10.742-.743L4.742 4l2.82-2.82a.525.525 0 000-.742z'></path>
-                        </svg>
-                      </a>
-                    </label>
-                  </div>
-                  <div className='popup-filter__prop'>
-                    <input type='radio' name='sdeliverytime' className='styled-radio popup-filter__radio' value='2' />
-                    <label className='popup-filter__radio-label'>
-                      <a
-                        href='https://kwork.ru/categories/logo/logotipy?sdeliverytime=2'
-                        className='popup-filter__radio-link'>
-                        До 2 дней
-                        <svg xmlns='http://www.w3.org/2000/svg' className='popup-filter__radio-cancel'>
-                          <path d='M7.562.438a.525.525 0 00-.743 0L4 3.258 1.18.438a.525.525 0 10-.742.743L3.258 4 .438 6.82a.525.525 0 10.743.742L4 4.742l2.82 2.82a.525.525 0 10.742-.743L4.742 4l2.82-2.82a.525.525 0 000-.742z'></path>
-                        </svg>
-                      </a>
-                    </label>
-                  </div>
-                  <div className='popup-filter__prop'>
-                    <input type='radio' name='sdeliverytime' className='styled-radio popup-filter__radio' value='3' />
-                    <label className='popup-filter__radio-label'>
-                      <a
-                        href='https://kwork.ru/categories/logo/logotipy?sdeliverytime=3'
-                        className='popup-filter__radio-link'>
-                        До 3 дней
-                        <svg xmlns='http://www.w3.org/2000/svg' className='popup-filter__radio-cancel'>
-                          <path d='M7.562.438a.525.525 0 00-.743 0L4 3.258 1.18.438a.525.525 0 10-.742.743L3.258 4 .438 6.82a.525.525 0 10.743.742L4 4.742l2.82 2.82a.525.525 0 10.742-.743L4.742 4l2.82-2.82a.525.525 0 000-.742z'></path>
-                        </svg>
-                      </a>
-                    </label>
-                  </div>
-                  <div className='popup-filter__prop'>
-                    <input type='radio' name='sdeliverytime' className='styled-radio popup-filter__radio' value='5' />
-                    <label className='popup-filter__radio-label'>
-                      <a
-                        href='https://kwork.ru/categories/logo/logotipy?sdeliverytime=5'
-                        className='popup-filter__radio-link'>
-                        До 5 дней
-                        <svg xmlns='http://www.w3.org/2000/svg' className='popup-filter__radio-cancel'>
-                          <path d='M7.562.438a.525.525 0 00-.743 0L4 3.258 1.18.438a.525.525 0 10-.742.743L3.258 4 .438 6.82a.525.525 0 10.743.742L4 4.742l2.82 2.82a.525.525 0 10.742-.743L4.742 4l2.82-2.82a.525.525 0 000-.742z'></path>
-                        </svg>
-                      </a>
-                    </label>
-                  </div>
-                  <div className='popup-filter__prop'>
-                    <input type='radio' name='sdeliverytime' className='styled-radio popup-filter__radio' value='10' />{' '}
-                    <label className='popup-filter__radio-label'>
-                      <a
-                        href='https://kwork.ru/categories/logo/logotipy?sdeliverytime=10'
-                        className='popup-filter__radio-link'>
-                        До 10 дней
-                        <svg xmlns='http://www.w3.org/2000/svg' className='popup-filter__radio-cancel'>
-                          <path d='M7.562.438a.525.525 0 00-.743 0L4 3.258 1.18.438a.525.525 0 10-.742.743L3.258 4 .438 6.82a.525.525 0 10.743.742L4 4.742l2.82 2.82a.525.525 0 10.742-.743L4.742 4l2.82-2.82a.525.525 0 000-.742z'></path>
-                        </svg>
-                      </a>
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className='popup-filter__group'>
-            <h3 className='popup-filter__group-title m-visible'>
-              <span className='popup-filter__group-title-text'>Заказов в работе</span>{' '}
-              <i
-                data-tooltip-text='Укажите допустимое количество заказов, которые сейчас находятся в работе у продавца'
-                data-tooltip-class='popup-filter__tooltip'
-                className='icon-question-outlined tooltipster cur popup-filter__group-title-icon'></i>
-            </h3>
-            <div className='card__content-column'>
-              <div className='card__content-header'>
-                <strong>Заказов в работе</strong>{' '}
-                <span className='wrap-tooltip_circle wrap-tooltip_circle--scale-16 ml0'>
-                  <span
-                    data-tooltip-side='right'
-                    data-tooltip-text='Укажите допустимое количество заказов, которые сейчас находятся в работе у продавца'
-                    data-tooltip-theme='dark'
-                    className='tooltipster tooltip_circle tooltip_circle--light tooltip_circle--hover tooltip_circle--scale-16'>
-                    ?
-                  </span>
-                </span>
-              </div>
-              <div className='card__content-body fw400 popup-filter__props popup-filter__props-list'>
-                <div className='popup-filter__prop'>
-                  <input type='radio' name='sordersqueue' className='styled-radio popup-filter__radio' value='1' />
-                  <label className='popup-filter__radio-label'>
-                    <a
-                      href='https://kwork.ru/categories/logo/logotipy?sordersqueue=1'
-                      className='popup-filter__radio-link'>
-                      Нет
-                      <svg xmlns='http://www.w3.org/2000/svg' className='popup-filter__radio-cancel'>
-                        <path d='M7.562.438a.525.525 0 00-.743 0L4 3.258 1.18.438a.525.525 0 10-.742.743L3.258 4 .438 6.82a.525.525 0 10.743.742L4 4.742l2.82 2.82a.525.525 0 10.742-.743L4.742 4l2.82-2.82a.525.525 0 000-.742z'></path>
-                      </svg>
-                    </a>
-                  </label>
-                </div>
-                <div className='popup-filter__prop'>
-                  <input type='radio' name='sordersqueue' className='styled-radio popup-filter__radio' value='2' />
-                  <label className='popup-filter__radio-label'>
-                    <a
-                      href='https://kwork.ru/categories/logo/logotipy?sordersqueue=2'
-                      className='popup-filter__radio-link'>
-                      До 1
-                      <svg xmlns='http://www.w3.org/2000/svg' className='popup-filter__radio-cancel'>
-                        <path d='M7.562.438a.525.525 0 00-.743 0L4 3.258 1.18.438a.525.525 0 10-.742.743L3.258 4 .438 6.82a.525.525 0 10.743.742L4 4.742l2.82 2.82a.525.525 0 10.742-.743L4.742 4l2.82-2.82a.525.525 0 000-.742z'></path>
-                      </svg>
-                    </a>
-                  </label>
-                </div>
-                <div className='popup-filter__prop'>
-                  <input type='radio' name='sordersqueue' className='styled-radio popup-filter__radio' value='4' />
-                  <label className='popup-filter__radio-label'>
-                    <a
-                      href='https://kwork.ru/categories/logo/logotipy?sordersqueue=4'
-                      className='popup-filter__radio-link'>
-                      До 3
-                      <svg xmlns='http://www.w3.org/2000/svg' className='popup-filter__radio-cancel'>
-                        <path d='M7.562.438a.525.525 0 00-.743 0L4 3.258 1.18.438a.525.525 0 10-.742.743L3.258 4 .438 6.82a.525.525 0 10.743.742L4 4.742l2.82 2.82a.525.525 0 10.742-.743L4.742 4l2.82-2.82a.525.525 0 000-.742z'></path>
-                      </svg>
-                    </a>
-                  </label>
-                </div>
-                <div className='popup-filter__prop'>
-                  <input type='radio' name='sordersqueue' className='styled-radio popup-filter__radio' value='6' />
-                  <label className='popup-filter__radio-label'>
-                    <a
-                      href='https://kwork.ru/categories/logo/logotipy?sordersqueue=6'
-                      className='popup-filter__radio-link'>
-                      До 5
-                      <svg xmlns='http://www.w3.org/2000/svg' className='popup-filter__radio-cancel'>
-                        <path d='M7.562.438a.525.525 0 00-.743 0L4 3.258 1.18.438a.525.525 0 10-.742.743L3.258 4 .438 6.82a.525.525 0 10.743.742L4 4.742l2.82 2.82a.525.525 0 10.742-.743L4.742 4l2.82-2.82a.525.525 0 000-.742z'></path>
-                      </svg>
-                    </a>
-                  </label>
-                </div>
-                <div className='popup-filter__prop'>
-                  <input type='radio' name='sordersqueue' className='styled-radio popup-filter__radio' value='9' />
-                  <label className='popup-filter__radio-label'>
-                    <a
-                      href='https://kwork.ru/categories/logo/logotipy?sordersqueue=9'
-                      className='popup-filter__radio-link'>
-                      До 8
-                      <svg xmlns='http://www.w3.org/2000/svg' className='popup-filter__radio-cancel'>
-                        <path d='M7.562.438a.525.525 0 00-.743 0L4 3.258 1.18.438a.525.525 0 10-.742.743L3.258 4 .438 6.82a.525.525 0 10.743.742L4 4.742l2.82 2.82a.525.525 0 10.742-.743L4.742 4l2.82-2.82a.525.525 0 000-.742z'></path>
-                      </svg>
-                    </a>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className='popup-filter__group'>
-            <h3 className='popup-filter__group-title m-visible'>
-              <span className='popup-filter__group-title-text'>Теги</span>
-            </h3>
-            <div className='card__content-column options'>
-              <div className='allmusic ml0'>
-                <div className='card__content-header'>
-                  <div className='showmorebtnx show-land'>
-                    <span className='showSubLand relative cur'>Теги</span>
-                  </div>
-                </div>
-                <div className='card__content-body popup-filter__props'>
-                  <div className='sub_land'>
-                    <ul className='sub_land_list mt5 p0'>
-                      <li>
-                        <a href='https://kwork.ru/land/logotip-dlya-kompanii' className='f13'>
-                          Логотип для компании
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/logotip-dlya-sayta' className='f13'>
-                          Логотип для сайта
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/logo-dlya-sayta' className='f13'>
-                          Лого для сайта
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/logo-dlya-kompanii' className='f13'>
-                          Лого для компании
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/narisovat-logotip' className='f13'>
-                          Нарисовать логотип
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/logo-dlya-biznesa' className='f13'>
-                          Лого для бизнеса
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/firmenniy-znak' className='f13'>
-                          Фирменный знак
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/kachestvenniy-logotip' className='f13'>
-                          Качественный логотип
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/razrabotka-emblemy' className='f13'>
-                          Разработка эмблемы
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/sozdat-logotip' className='f13'>
-                          Создать логотип
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/razrabotka-logotipa' className='f13'>
-                          Разработка логотипа
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/unikalniy-logotip' className='f13'>
-                          Уникальный логотип
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/sozdat-dizayn-logotipa' className='f13'>
-                          Создать дизайн логотипа
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/razrabotka-dizayna-logotipa' className='f13'>
-                          Разработка дизайна логотипа
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/individualniy-logotip' className='f13'>
-                          Индивидуальный логотип
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/kreativniy-logotip' className='f13'>
-                          Креативный логотип
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/professionalniy-logotip' className='f13'>
-                          Профессиональный логотип
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/vektorniy-logotip' className='f13'>
-                          Векторный логотип
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/stilniy-logotip' className='f13'>
-                          Стильный логотип
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/vektorniy-logo' className='f13'>
-                          Векторный лого
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/sdelat-logotip' className='f13'>
-                          Сделать логотип
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/logotip-dlya-biznesa' className='f13'>
-                          Логотип для бизнеса
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/iskhodnik-logotipa' className='f13'>
-                          Исходник логотипа
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/dizayn-logo' className='f13'>
-                          Дизайн лого
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/narisovat-dizayn-logotipa' className='f13'>
-                          Нарисовать дизайн логотипа
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/originalniy-logotip' className='f13'>
-                          Оригинальный логотип
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/3d-logotip' className='f13'>
-                          3D логотип
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/eskiz-logotipa' className='f13'>
-                          Эскиз логотипа
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/logotip-po-eskizu' className='f13'>
-                          Логотип по эскизу
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/logo' className='f13'>
-                          Лого
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/otrisovka-logotipa' className='f13'>
-                          Отрисовка логотипа
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/razrabotka-logo' className='f13'>
-                          Разработка лого
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/narisovat-logo' className='f13'>
-                          Нарисовать лого
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/sdelat-logo' className='f13'>
-                          Сделать лого
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/sozdat-logo' className='f13'>
-                          Создать лого
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/vizitnaya-kartochka' className='f13'>
-                          Визитная карточка
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/dizayn-vizitok' className='f13'>
-                          Дизайн визиток
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/maket-vizitki' className='f13'>
-                          Макет визитки
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/vizitka-dlya-biznesa' className='f13'>
-                          Визитка для бизнеса
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/vizitnie-karty' className='f13'>
-                          Визитные карты
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/dvustoronnyaya-vizitka' className='f13'>
-                          Двусторонняя визитка
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/dizayn-vizitnoy-kartochki' className='f13'>
-                          Дизайн визитной карточки
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/dizayn-maket-vizitki' className='f13'>
-                          Дизайн-макет визитки
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/izgotovit-vizitku' className='f13'>
-                          Изготовить визитку
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/originalniy-dizayn-vizitki' className='f13'>
-                          Оригинальный дизайн визитки
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/razrabotat-dizayn-vizitki' className='f13'>
-                          Разработать дизайн визитки
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/razrabotat-vizitnuyu-kartochku' className='f13'>
-                          Разработать визитную карточку
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/razrabotat-maket-vizitki' className='f13'>
-                          Разработать макет визитки
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/eksklyuzivnaya-vizitka' className='f13'>
-                          Эксклюзивная визитка
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/sdelat-vizitku' className='f13'>
-                          Сделать визитку
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/sdelat-dizayn-vizitki' className='f13'>
-                          Сделать дизайн визитки
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/sdelat-maket-vizitki' className='f13'>
-                          Сделать макет визитки
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/sozdat-vizitku' className='f13'>
-                          Создать визитку
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/sozdat-maket-vizitki' className='f13'>
-                          Создать макет визитки
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/unikalnaya-vizitka' className='f13'>
-                          Уникальная визитка
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/psd-vizitki' className='f13'>
-                          PSD визитки
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/narisovat-vizitku' className='f13'>
-                          Нарисовать визитку
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/razrabotat-vizitku' className='f13'>
-                          Разработать визитку
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/maket-poligrafii' className='f13'>
-                          Макет полиграфии
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/maket-pechati' className='f13'>
-                          Макет печати
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/logotip-akvarelyu' className='f13'>
-                          Логотип акварелью
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/razrabotat-dizayn-firmennogo-blanka' className='f13'>
-                          Разработать дизайн фирменного бланка
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/razrabotka-firmennogo-logotipa' className='f13'>
-                          Разработка фирменного логотипа
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/sozdanie-firmennogo-stilya' className='f13'>
-                          Создание фирменного стиля
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/razrabotka-brendbuka' className='f13'>
-                          Разработка брендбука
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/sozdanie-firmennogo-blanka' className='f13'>
-                          Создание фирменного бланка
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/sozdat-firmenniy-blank-s-logotipom' className='f13'>
-                          Создать фирменный бланк с логотипом
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/razrabotka-firmennogo-stilya' className='f13'>
-                          Разработка фирменного стиля
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/razrabotat-dizayn-blanka' className='f13'>
-                          Разработать дизайн бланка
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/razrabotka-brenda' className='f13'>
-                          Разработка бренда
-                        </a>
-                      </li>
-                      <li>
-                        <a href='https://kwork.ru/land/razrabotka-firmennogo-blanka' className='f13'>
-                          Разработка фирменного бланка
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
+          <article className={styles.filtersWrapper}>
+            <h3 className={styles.filterTitle}>Срок выполнения</h3>
+            {deadline.map((item, index) => (
+              <a className={styles.filterLink} href={`${item.link}`} key={index}>
+                {item.level}.
+              </a>
+            ))}
+          </article>
+          <article className={styles.filtersWrapper}>
+            <button className={styles.filterBtn} type='button'>
+              Теги
+            </button>
+            {tags.map((item, index) => (
+              <a className={styles.filterLink} href={`${item.link}`} key={index}>
+                {item.level}.
+              </a>
+            ))}
+          </article>
           <button type='button' className='kworks-filter-button kworks-filter-button--pretty'>
             <span>Фильтры</span>{' '}
             <img
