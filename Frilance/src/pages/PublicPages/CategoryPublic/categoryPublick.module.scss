@@ -93,7 +93,8 @@
   column-gap: 24px;
 }
 .filters {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   row-gap: 8px;
   max-width: 230px;
   background-color: white;
@@ -114,11 +115,71 @@
     background-color: #e8e8e8;
   }
 }
+.filterTitleBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
 .filterTitle {
+  position: relative;
   color: #111;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 18px;
+}
+.questionImg {
+  cursor: pointer;
+  &:hover ~ .filterDescBox {
+    opacity: 1;
+  }
+}
+.filterDescBox {
+  position: absolute;
+  top: -40px;
+  right: -370px;
+  max-width: 397px;
+  display: grid;
+  row-gap: 4px;
+  background-color: $text;
+  color: white;
+  font-size: 12px;
+  line-height: 18px;
+  border-radius: 4px;
+  padding: 4px;
+  opacity: 0;
+  transition: 0.5s;
+  &:before {
+    position: absolute;
+    content: '';
+    top: 40px;
+    left: -10px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 10px solid $text;
+    border-bottom: 10px solid transparent;
+  }
+}
+.inputBox {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(80px, 1fr));
+  column-gap: 8px;
+}
+.input {
+  font-size: 14px;
+  border: 1px solid #a5a5a5;
+  height: 100%;
+  padding: 4px 8px;
+  &:focus {
+    outline: 2px solid $btnHover;
+    border: none;
+  }
+}
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 .filterBtn {
   @extend %button;

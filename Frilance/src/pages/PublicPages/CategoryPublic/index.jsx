@@ -18,6 +18,7 @@ import {
   deadline,
   tags,
 } from './arrayDataFilterDesignLogo';
+import question from '../../../../src/assets/images/question-outlined.svg';
 
 function CategoryPublic({ children }) {
   const location = useLocation();
@@ -527,36 +528,40 @@ function CategoryPublic({ children }) {
                 {item.price}.
               </a>
             ))}
-            <div className='price-filter-inputs-block'>
-              <div className='price-filter-input__box w100pi_mobile popup-filter__field'>
-                <span className='popup-filter__field-text'>от</span>{' '}
-                <input
-                  type='number'
-                  min='0'
-                  step='1'
-                  data-volume-name='volume_price_from'
-                  data-price='from'
-                  placeholder='От руб.'
-                  autoComplete='off'
-                  className='js-combined-filter-input popup-filter__field-input text-transform-normal'
-                />
-              </div>
-              <div className='price-filter-input__box ml10 w100pi_mobile popup-filter__field'>
-                <span className='popup-filter__field-text'>до</span>{' '}
-                <input
-                  type='number'
-                  min='0'
-                  data-volume-name='volume_price_to'
-                  data-price='to'
-                  placeholder='До руб.'
-                  autoComplete='off'
-                  className='js-combined-filter-input popup-filter__field-input text-transform-normal'
-                />
-              </div>
+            <div className={styles.inputBox}>
+              <input
+                type='number'
+                min='0'
+                step='1'
+                data-volume-name='volume_price_from'
+                data-price='from'
+                placeholder='От руб.'
+                autoComplete='off'
+                className={styles.input}
+              />
+              <input
+                type='number'
+                min='0'
+                data-volume-name='volume_price_to'
+                data-price='to'
+                placeholder='До руб.'
+                autoComplete='off'
+                className={styles.input}
+              />
             </div>
           </article>
           <article className={styles.filtersWrapper}>
-            <h3 className={styles.filterTitle}>Уровень продавца</h3>
+            <aside className={styles.filterTitleBox}>
+              <h3 className={styles.filterTitle}>Уровень продавца</h3>
+              <img className={styles.questionImg} src={question} height={14} width={14} alt='question' />
+              <div className={styles.filterDescBox}>
+                <p className={styles.filterDesc}>
+                  Продавцы с уровнем «Восходящая звезда», «Высший рейтинг» и «Высший рейтинг плюс» - это те, кто уже
+                  зарекомендовал себя на Kwork, и кому можно доверять.
+                </p>
+                <p>Данные продавцы должны выполнить не менее 10 заказов, из них не менее 90% должны быть успешными.</p>
+              </div>
+            </aside>
             {levelSalesman.map((item, index) => (
               <a className={styles.filterLink} href={`${item.link}`} key={index}>
                 {item.level}.
