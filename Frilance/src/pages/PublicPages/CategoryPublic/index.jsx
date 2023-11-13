@@ -555,7 +555,7 @@ function CategoryPublic({ children }) {
               <h3 className={styles.filterTitle}>Уровень продавца</h3>
               <img className={styles.questionImg} src={question} height={14} width={14} alt='question' />
               <div className={styles.filterDescBox}>
-                <p className={styles.filterDesc}>
+                <p>
                   Продавцы с уровнем «Восходящая звезда», «Высший рейтинг» и «Высший рейтинг плюс» - это те, кто уже
                   зарекомендовал себя на Kwork, и кому можно доверять.
                 </p>
